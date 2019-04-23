@@ -1,27 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+//styles:
+import './css/main.css'
+
+//Components
+import {Info} from './Components/ContextAPI/Info';
+import HeaderComponent from './Components/HeaderComponent/HeaderComponent.js';
+import OurAdvantages from './Components/OurAdvantages/OurAdvantages.js';
+import HowItWorks from './Components/HowItWorks/HowItWorks.js';
+import MiningPlan from './Components/MiningPlan/MiningPlan.js';
+import ClientsReviews from './Components/ClientsReviews/ClientsReviews.js';
+import ContactForm from './Components/ContactForm/ContactForm.js';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    render() {
+        return (
+            <Info>
+                <section className="app">
+                    <HeaderComponent />
+
+                    <OurAdvantages />
+
+                    <HowItWorks />
+
+                    <MiningPlan />
+
+                    <ClientsReviews />
+
+                    <ContactForm />
+                </section>
+            </Info>
+    )
   }
 }
 
