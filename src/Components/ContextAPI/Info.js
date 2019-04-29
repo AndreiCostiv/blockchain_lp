@@ -4,12 +4,22 @@ export const {Consumer, Provider} = React.createContext();
 
 class Info extends Component{
     state = {
-        number: 10
+        lightTheme: true
+    };
+
+    TriggerMethod = () =>{
+        this.setState({
+            lightTheme: !this.state.lightTheme
+        });
     };
 
     render() {
         return (
-            <Provider value = {{state: this.state}}>
+            <Provider
+                value = {{
+                    lightTheme: this.state.lightTheme,
+                    TriggerMethod: this.TriggerMethod
+                }}>
                 {this.props.children}
             </Provider>
         );
