@@ -1,3 +1,84 @@
-body {
+* {
   margin: 0;
   padding: 0; }
+
+.HeaderComponent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../images/HeaderBG.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.HeaderComponentTitle {
+  height: 167px;
+  margin: 10% auto 54px auto;
+  cursor: default;
+  color: #fff;
+  font-size: 6.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.TryItButton {
+  width: 587px;
+  height: 120px;
+  outline: 7px solid #fff;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.TryItButtonText {
+  font-size: 69px; }
+
+.ThemeTrigger {
+  width: 135px;
+  height: 57px;
+  padding: 0 4px;
+  margin: 34px 27px 0 auto;
+  align-self: flex-end;
+  border: 3px solid #fff;
+  border-radius: 31.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../images/icons/ThemeIcon.svg");
+  background-repeat: no-repeat;
+  background-position-x: 84px;
+  background-position-y: 7px; }
+
+.TriggerCircle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.75);
+  cursor: pointer; }
+
+@media screen and (max-width: 880px) {
+  .HeaderComponentTitle {
+    font-size: 2.2em; }
+  .TryItButton {
+    width: 180px;
+    height: 37px; }
+  .TryItButtonText {
+    font-size: 1.5em; }
+  .TryItButtonImg {
+    width: 20px;
+    height: 20px; } }
+
+@media screen and (max-width: 880px) {
+  .ThemeTrigger {
+    width: 40px;
+    height: 20px;
+    background-size: contain;
+    background-position-x: 25px;
+    background-position-y: 0; }
+  .TriggerCircle {
+    width: 17px;
+    height: 17px; } }
