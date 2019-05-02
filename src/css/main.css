@@ -2,6 +2,22 @@
   margin: 0;
   padding: 0; }
 
+@font-face {
+  font-family: CONTF;
+  src: url("../fonts/CONTF.TTF") format("truetype"); }
+
+@font-face {
+  font-family: CONSOLA;
+  src: url("../fonts/CONSOLA.TTF") format("truetype"); }
+
+@font-face {
+  font-family: CODAR;
+  src: url("../fonts/CODA-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: CODAB;
+  src: url("../fonts/CODA-ExtraBold.ttf") format("truetype"); }
+
 .HeaderComponent {
   width: 100%;
   height: 100vh;
@@ -14,17 +30,18 @@
   background-repeat: no-repeat; }
 
 .HeaderComponentTitle {
-  height: 167px;
   margin: 10% auto 54px auto;
   cursor: default;
   color: #fff;
-  font-size: 6.5em;
+  font-size: 11.68vw;
+  font-family: CONTF, sans-serif;
+  font-weight: normal;
   display: flex;
   align-items: center;
   justify-content: center; }
 
 .TryItButton {
-  width: 587px;
+  width: 45%;
   height: 120px;
   outline: 7px solid #fff;
   color: #ffffff;
@@ -34,7 +51,23 @@
   justify-content: space-evenly; }
 
 .TryItButtonText {
-  font-size: 69px; }
+  font-family: CONSOLA, sans-serif;
+  font-size: 5vw;
+  font-weight: normal; }
+
+.GeneralBackgroundBlock {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.GeneralBackgroundImage {
+  width: 100%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #2DACE2 0%, #4A00E0 100%, #4A00E0 100%); }
 
 .ThemeTrigger {
   width: 135px;
@@ -60,14 +93,54 @@
   background: rgba(0, 194, 255, 0.75);
   cursor: pointer; }
 
+.OurAdvantages {
+  width: 100%;
+  height: auto;
+  margin: 146px 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.AdventageItem {
+  min-width: 465px;
+  width: 25%;
+  height: 196px;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+.AdventageItemIconBlock {
+  width: 196px;
+  height: 196px;
+  margin: 0 40px 0 0; }
+
+.AdventageItemIcon {
+  width: 196px;
+  height: 196px; }
+
+.AdventageTextBox {
+  margin: 35px 0 0 0;
+  color: white; }
+
+.AdventageHeader {
+  font-family: CODAB, sans-serif;
+  font-size: 1.5vw;
+  letter-spacing: 0.1em; }
+
+.AdventageParagraph {
+  color: #B0FFDE;
+  font-family: CODAR, sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.1em; }
+
 @media screen and (max-width: 880px) {
-  .HeaderComponentTitle {
-    font-size: 2.2em; }
   .TryItButton {
-    width: 180px;
     height: 37px; }
-  .TryItButtonText {
-    font-size: 1.5em; }
   .TryItButtonImg {
     width: 20px;
     height: 20px; } }
@@ -82,3 +155,25 @@
   .TriggerCircle {
     width: 17px;
     height: 17px; } }
+
+@media screen and (max-width: 880px) {
+  .OurAdvantages {
+    margin: 0; }
+  .AdventageItem {
+    min-width: 320px;
+    width: 95%;
+    height: 100px;
+    margin: 15px 0 15px 0; }
+  .AdventageItemIconBlock {
+    width: 100px;
+    height: 100px; }
+  .AdventageItemIcon {
+    width: 100px;
+    height: 100px; }
+  .AdventageTextBox {
+    margin: auto 0; }
+  .AdventageHeader {
+    font-size: 18px;
+    letter-spacing: 0.1em; }
+  .AdventageParagraph {
+    font-size: 12px; } }
