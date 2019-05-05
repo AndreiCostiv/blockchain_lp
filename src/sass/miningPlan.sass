@@ -1,0 +1,125 @@
+@import "./mixins"
+
+.MiningPlanComponentHeader
+  +headerForComponents
+
+.MiningPlan
+  width: 100%
+  min-height: 550px
+
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-evenly
+
+.MiningPlanItem
+  width: 300px
+  height: 450px
+
+  margin: 5px 0
+
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.45)
+  border: 1px solid aqua
+
+  background:
+    image: linear-gradient(90deg, rgba(253, 80, 254, 0.7) 0%, rgba(255, 80, 255, 0) 50%, rgba(97, 255, 255, 0.7) 100%)
+
+
+  transition: .1s
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  &:nth-child(1)
+    background:
+      image: linear-gradient(140deg, rgba(253, 80, 254, 0.7) 25%, rgba(255, 80, 255, 0) 80%)
+
+  &:nth-child(2)
+    width: 320px
+    height: 520px
+
+    justify-content: space-evenly
+
+  &:nth-child(3)
+    background:
+      image: linear-gradient(45deg, rgba(255, 80, 255, 0) 20%, rgba(97, 255, 255, 0.7) 80%)
+
+.MiningName
+  width: 100%
+
+  margin: 0 0 -10px 0
+
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+  font-family: CODAB, sans-serif
+  color: #fff
+  font-size: 40px
+
+.MiningCurrencies
+  color: #ffffff
+
+.orangeCurrencyValue
+  color: #FFB800
+
+.greenCurrencyValue
+  color: #00EF8B
+
+.redCurrencyValue
+  color: #FF0000
+
+.HashRare
+  width: 80%
+
+  margin: 25px 0 30px 0
+
+  outline: 1px solid #fff
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.HashRareTitle, .HashRareValue
+  font-family: CODAB, sans-serif
+  color: #fff
+  font-size: 40px
+
+.MiningPrice
+  margin: 0 0 0 0
+
+  color: #fff
+  font-family: freak-regular, sans-serif
+  font-size: 35px
+
+.MiningPricePerPeriod
+  margin: 0 0 0 0
+
+  font-size: 15px
+  font-family: CODAR, sans-serif
+  font-weight: bolder
+
+.BuyNow
+  margin: 15px 0 0 0
+  padding: 0 10px
+
+  cursor: pointer
+
+  background:
+    image: linear-gradient(90deg, rgba(74, 0, 224, 1) 0%, rgba(142, 45, 226, 1) 100%)
+
+  border: none
+  outline: none
+
+  font-family: CODAR, sans-serif
+  color: #B0FFDE
+  font-style: normal
+  font-weight: normal
+  font-size: 40px
+
+  box-shadow: 1px 0 30px #3505BE, -1px 0 30px #3505BE

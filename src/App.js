@@ -22,9 +22,13 @@ class App extends Component {
 
                     <GeneralBackground>
                         <OurAdvantages />
+
                         <HowItWorks />
+
                         <MiningPlan />
+
                         <ClientsReviews />
+
                         <ContactForm />
                     </GeneralBackground>
                 </section>
