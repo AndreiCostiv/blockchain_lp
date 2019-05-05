@@ -18,6 +18,10 @@
   font-family: CODAB;
   src: url("../fonts/CODA-ExtraBold.ttf") format("truetype"); }
 
+@font-face {
+  font-family: freak-regular;
+  src: url("../fonts/control-freak-regular.ttf") format("truetype"); }
+
 .HeaderComponent {
   width: 100%;
   height: 100vh;
@@ -57,17 +61,13 @@
 
 .GeneralBackgroundBlock {
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden; }
-
-.GeneralBackgroundImage {
-  width: 100%;
-  position: absolute;
-  top: 100vh;
-  left: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, #2DACE2 0%, #4A00E0 100%, #4A00E0 100%); }
+  overflow-y: hidden;
+  background-image: url("../images/BackgoundImage.svg");
+  background-size: cover;
+  background-color: #3505BE;
+  background-repeat: no-repeat; }
 
 .ThemeTrigger {
   width: 135px;
@@ -128,6 +128,111 @@
 
 .HowItWorksImage {
   width: 100%; }
+
+.MiningPlanComponentHeader {
+  width: 100%;
+  margin: 90px 0 83px 0;
+  text-align: center;
+  font-family: CODAB, sans-serif;
+  font-size: 60px;
+  color: #fff; }
+  @media screen and (max-width: 880px) {
+    .MiningPlanComponentHeader {
+      margin: 11px 0;
+      font-size: 25px; } }
+
+.MiningPlan {
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.MiningPlanItem {
+  width: 300px;
+  height: 450px;
+  margin: 5px 0;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.45);
+  border: 1px solid aqua;
+  background-image: linear-gradient(90deg, rgba(253, 80, 254, 0.7) 0%, rgba(255, 80, 255, 0) 50%, rgba(97, 255, 255, 0.7) 100%);
+  transition: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .MiningPlanItem:nth-child(1) {
+    background-image: linear-gradient(140deg, rgba(253, 80, 254, 0.7) 25%, rgba(255, 80, 255, 0) 80%); }
+  .MiningPlanItem:nth-child(2) {
+    width: 320px;
+    height: 520px;
+    justify-content: space-evenly; }
+  .MiningPlanItem:nth-child(3) {
+    background-image: linear-gradient(45deg, rgba(255, 80, 255, 0) 20%, rgba(97, 255, 255, 0.7) 80%); }
+
+.MiningName {
+  width: 100%;
+  margin: 0 0 -10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: CODAB, sans-serif;
+  color: #fff;
+  font-size: 40px; }
+
+.MiningCurrencies {
+  color: #ffffff; }
+
+.orangeCurrencyValue {
+  color: #FFB800; }
+
+.greenCurrencyValue {
+  color: #00EF8B; }
+
+.redCurrencyValue {
+  color: #FF0000; }
+
+.HashRare {
+  width: 80%;
+  margin: 25px 0 30px 0;
+  outline: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.HashRareTitle, .HashRareValue {
+  font-family: CODAB, sans-serif;
+  color: #fff;
+  font-size: 40px; }
+
+.MiningPrice {
+  margin: 0 0 0 0;
+  color: #fff;
+  font-family: freak-regular, sans-serif;
+  font-size: 35px; }
+
+.MiningPricePerPeriod {
+  margin: 0 0 0 0;
+  font-size: 15px;
+  font-family: CODAR, sans-serif;
+  font-weight: bolder; }
+
+.BuyNow {
+  margin: 15px 0 0 0;
+  padding: 0 10px;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+  border: none;
+  outline: none;
+  font-family: CODAR, sans-serif;
+  color: #B0FFDE;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  box-shadow: 1px 0 30px #3505BE, -1px 0 30px #3505BE; }
 
 .OurAdvantages {
   width: 100%;
@@ -220,7 +325,7 @@
     height: 202px;
     margin: 0 auto;
     padding: 0 10px;
-    background-image: url("../images/ArticleIMG.png");
+    background-image: url("../images/ArticleImgMobile.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
@@ -242,3 +347,9 @@
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0.1em; } }
+
+@media screen and (max-width: 880px) {
+  .MiningPlanItem {
+    width: 270px; }
+    .MiningPlanItem:nth-child(2) {
+      width: 270px; } }
