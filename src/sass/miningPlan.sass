@@ -3,9 +3,10 @@
 .MiningPlanComponentHeader
   +headerForComponents
 
+  margin: 40px 0 0 0
+
 .MiningPlan
   width: 100%
-  min-height: 550px
 
   display: flex
   flex-direction: row
@@ -22,12 +23,6 @@
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.45)
   border: 1px solid aqua
 
-  background:
-    image: linear-gradient(90deg, rgba(253, 80, 254, 0.7) 0%, rgba(255, 80, 255, 0) 50%, rgba(97, 255, 255, 0.7) 100%)
-
-
-  transition: .1s
-
   display: flex
   flex-direction: column
   align-items: center
@@ -35,34 +30,38 @@
 
   &:nth-child(1)
     background:
-      image: linear-gradient(140deg, rgba(253, 80, 254, 0.7) 25%, rgba(255, 80, 255, 0) 80%)
+      image: linear-gradient(180deg, rgba(238, 0, 0, 0.2) 0%, rgba(220, 164, 82, 0) 100%)
 
   &:nth-child(2)
     width: 320px
     height: 520px
 
+    background:
+      image: linear-gradient(180deg, rgba(250, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
+
     justify-content: space-evenly
 
   &:nth-child(3)
     background:
-      image: linear-gradient(45deg, rgba(255, 80, 255, 0) 20%, rgba(97, 255, 255, 0.7) 80%)
+      image: linear-gradient(180deg, rgba(0, 255, 87, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
 
 .MiningName
   width: 100%
 
-  margin: 0 0 -10px 0
+  margin: 0 0 -5px 0
 
   display: flex
   flex-direction: row
   align-items: center
   justify-content: center
 
-  font-family: CODAB, sans-serif
+  font-family: Roboto-bold, sans-serif
   color: #fff
   font-size: 40px
 
 .MiningCurrencies
   color: #ffffff
+  font-family: CODAR, sans-serif
 
 .orangeCurrencyValue
   color: #FFB800
@@ -86,7 +85,7 @@
   justify-content: center
 
 .HashRareTitle, .HashRareValue
-  font-family: CODAB, sans-serif
+  font-family: CODAR, sans-serif
   color: #fff
   font-size: 40px
 
@@ -102,7 +101,8 @@
 
   font-size: 15px
   font-family: CODAR, sans-serif
-  font-weight: bolder
+  font-weight: normal
+  color: rgba(176, 255, 222, 0.8)
 
 .BuyNow
   margin: 15px 0 0 0

@@ -27,7 +27,7 @@ class App extends Component {
 
                         <MiningPlan />
 
-                        <ClientsReviews />
+                        {/*<ClientsReviews />*/}
 
                         <ContactForm />
                     </GeneralBackground>

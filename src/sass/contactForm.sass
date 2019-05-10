@@ -1,0 +1,68 @@
+@import "./mixins"
+
+.ContactForm
+  width: 100%
+  height: auto
+
+  margin: 40px 0
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+
+.ContactFormHeader
+  +headerForComponents
+
+.ContactFormTitle
+  font-family: CODAR, sans-serif
+  color: #fff
+  font-size: 3vw
+
+  margin: 0 0 50px 0
+
+.AwesomeFormBox
+  width: 800px
+  height: auto
+
+  margin: 0 0 30px 0
+
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: space-between
+
+.AwesomeFormInput
+  width: 618px
+  height: 74px
+
+  padding: 0 20px
+
+  background:
+    color: transparent
+
+  color: #fff
+  font-size: 40px
+
+  outline: none
+  border: 3px solid #FFFFFF
+  border-radius: 50px 50px 50px 0
+
+.AwesomeFormButton
+  width: 80px
+  height: 80px
+
+  border-radius: 50%
+  border: 3px solid #FFFFFF
+  outline: none
+
+  background:
+    color: transparent
+    image: url("../images/icons/Arrow.svg")
+    position: center
+    repeat: no-repeat
+    size: 50px
+
+  &:hover
+    cursor: pointer

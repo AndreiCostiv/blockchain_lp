@@ -22,19 +22,92 @@
   font-family: freak-regular;
   src: url("../fonts/control-freak-regular.ttf") format("truetype"); }
 
+@font-face {
+  font-family: Roboto-regular;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Roboto-bold;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"); }
+
+.SlickSlider {
+  margin: 20px 0; }
+
+.ContactForm {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+.ContactFormHeader {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: Roboto-bold, sans-serif;
+  font-size: 60px;
+  color: #fff; }
+  @media screen and (max-width: 880px) {
+    .ContactFormHeader {
+      margin: 0;
+      font-size: 6.5vw; } }
+
+.ContactFormTitle {
+  font-family: CODAR, sans-serif;
+  color: #fff;
+  font-size: 3vw;
+  margin: 0 0 50px 0; }
+
+.AwesomeFormBox {
+  width: 800px;
+  height: auto;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between; }
+
+.AwesomeFormInput {
+  width: 618px;
+  height: 74px;
+  padding: 0 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 40px;
+  outline: none;
+  border: 3px solid #FFFFFF;
+  border-radius: 50px 50px 50px 0; }
+
+.AwesomeFormButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  outline: none;
+  background-color: transparent;
+  background-image: url("../images/icons/Arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px; }
+  .AwesomeFormButton:hover {
+    cursor: pointer; }
+
 .HeaderComponent {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-image: url("../images/HeaderBG.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
 .HeaderComponentTitle {
-  margin: 10% auto 54px auto;
+  margin: 0 auto 54px auto;
   cursor: default;
   color: #fff;
   font-size: 11.68vw;
@@ -53,6 +126,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly; }
+  .TryItButton:hover {
+    cursor: pointer; }
 
 .TryItButtonText {
   font-family: CONSOLA, sans-serif;
@@ -73,8 +148,9 @@
   width: 135px;
   height: 57px;
   padding: 0 4px;
-  margin: 34px 27px 0 auto;
-  align-self: flex-end;
+  position: absolute;
+  top: 34px;
+  right: 27px;
   border: 3px solid #fff;
   border-radius: 31.5px;
   display: flex;
@@ -96,7 +172,7 @@
 .HowItWorksMainBox {
   width: 95%;
   height: auto;
-  margin: 90px auto 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -131,19 +207,19 @@
 
 .MiningPlanComponentHeader {
   width: 100%;
-  margin: 90px 0 83px 0;
+  margin: 0;
   text-align: center;
-  font-family: CODAB, sans-serif;
+  font-family: Roboto-bold, sans-serif;
   font-size: 60px;
-  color: #fff; }
+  color: #fff;
+  margin: 40px 0 0 0; }
   @media screen and (max-width: 880px) {
     .MiningPlanComponentHeader {
-      margin: 11px 0;
-      font-size: 25px; } }
+      margin: 0;
+      font-size: 6.5vw; } }
 
 .MiningPlan {
   width: 100%;
-  min-height: 550px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -156,34 +232,34 @@
   margin: 5px 0;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.45);
   border: 1px solid aqua;
-  background-image: linear-gradient(90deg, rgba(253, 80, 254, 0.7) 0%, rgba(255, 80, 255, 0) 50%, rgba(97, 255, 255, 0.7) 100%);
-  transition: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
   .MiningPlanItem:nth-child(1) {
-    background-image: linear-gradient(140deg, rgba(253, 80, 254, 0.7) 25%, rgba(255, 80, 255, 0) 80%); }
+    background-image: linear-gradient(180deg, rgba(238, 0, 0, 0.2) 0%, rgba(220, 164, 82, 0) 100%); }
   .MiningPlanItem:nth-child(2) {
     width: 320px;
     height: 520px;
+    background-image: linear-gradient(180deg, rgba(250, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
     justify-content: space-evenly; }
   .MiningPlanItem:nth-child(3) {
-    background-image: linear-gradient(45deg, rgba(255, 80, 255, 0) 20%, rgba(97, 255, 255, 0.7) 80%); }
+    background-image: linear-gradient(180deg, rgba(0, 255, 87, 0.3) 0%, rgba(255, 255, 255, 0) 100%); }
 
 .MiningName {
   width: 100%;
-  margin: 0 0 -10px 0;
+  margin: 0 0 -5px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: CODAB, sans-serif;
+  font-family: Roboto-bold, sans-serif;
   color: #fff;
   font-size: 40px; }
 
 .MiningCurrencies {
-  color: #ffffff; }
+  color: #ffffff;
+  font-family: CODAR, sans-serif; }
 
 .orangeCurrencyValue {
   color: #FFB800; }
@@ -204,7 +280,7 @@
   justify-content: center; }
 
 .HashRareTitle, .HashRareValue {
-  font-family: CODAB, sans-serif;
+  font-family: CODAR, sans-serif;
   color: #fff;
   font-size: 40px; }
 
@@ -218,7 +294,8 @@
   margin: 0 0 0 0;
   font-size: 15px;
   font-family: CODAR, sans-serif;
-  font-weight: bolder; }
+  font-weight: normal;
+  color: rgba(176, 255, 222, 0.8); }
 
 .BuyNow {
   margin: 15px 0 0 0;
@@ -237,7 +314,7 @@
 .OurAdvantages {
   width: 100%;
   height: auto;
-  margin: 146px 0 0 0;
+  margin: 40px 0 40px 0;
   padding: 0;
   display: flex;
   align-items: center;
@@ -247,7 +324,7 @@
 .AdventageItem {
   min-width: 465px;
   width: 25%;
-  height: 196px;
+  height: 150px;
   margin: 10px 0 0 0;
   display: flex;
   flex-direction: row;
@@ -256,20 +333,20 @@
   justify-content: flex-start; }
 
 .AdventageItemIconBlock {
-  width: 196px;
-  height: 196px;
+  width: 150px;
+  height: 150px;
   margin: 0 40px 0 0; }
 
 .AdventageItemIcon {
-  width: 196px;
-  height: 196px; }
+  width: 150px;
+  height: 150px; }
 
 .AdventageTextBox {
   margin: 35px 0 0 0;
   color: white; }
 
 .AdventageHeader {
-  font-family: CODAB, sans-serif;
+  font-family: Roboto-regular, sans-serif;
   font-size: 1.5vw;
   letter-spacing: 0.1em; }
 
@@ -280,6 +357,8 @@
   letter-spacing: 0.1em; }
 
 @media screen and (max-width: 880px) {
+  .HeaderComponentTitle {
+    margin: 0 0 20px 0; }
   .TryItButton {
     height: 37px; }
   .TryItButtonImg {
@@ -304,13 +383,14 @@
     min-width: 320px;
     width: 95%;
     height: 100px;
-    margin: 15px 0 15px 0; }
+    margin: 15px 0 30px 0; }
   .AdventageItemIconBlock {
-    width: 100px;
-    height: 100px; }
+    width: 120px;
+    height: 120px;
+    margin: 0 20px 0 0; }
   .AdventageItemIcon {
-    width: 100px;
-    height: 100px; }
+    width: 120px;
+    height: 120px; }
   .AdventageTextBox {
     margin: auto 0; }
   .AdventageHeader {
@@ -349,7 +429,33 @@
     letter-spacing: 0.1em; } }
 
 @media screen and (max-width: 880px) {
+  .MiningPlanComponentHeader {
+    margin: 15px 0 0 0; }
   .MiningPlanItem {
-    width: 270px; }
+    width: 270px;
+    height: 400px;
+    margin: 20px 0; }
     .MiningPlanItem:nth-child(2) {
-      width: 270px; } }
+      width: 270px;
+      height: 400px;
+      justify-content: center; } }
+
+@media screen and (max-width: 880px) {
+  .ContactForm {
+    margin: 15px 0 30px 0; }
+  .ContactFormTitle {
+    margin: 0 0 20px 0; }
+  .AwesomeFormBox {
+    width: 100%;
+    margin: 0;
+    justify-content: center; }
+  .AwesomeFormInput {
+    min-width: 240px;
+    width: 60%;
+    height: 29px;
+    font-size: 20px; }
+  .AwesomeFormButton {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 17px;
+    background-size: 20px; } }
