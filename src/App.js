@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import './css/main.css'
 
 //Components
+import CustomScrollbar from './Components/CustomScrollbar/CustomScrollbar';
 import {Info} from './Components/ContextAPI/Info';
 import HeaderComponent from './Components/HeaderComponent/HeaderComponent.js';
 import GeneralBackground from './Components/GeneralBackgroundComponent/GeneralBackground.js';
@@ -17,24 +18,26 @@ class App extends Component {
     render() {
         return (
             <Info>
-                <section className="app">
-                    <HeaderComponent />
+               <CustomScrollbar>
+                   <section className="app">
+                       <HeaderComponent/>
 
-                    <GeneralBackground>
-                        <OurAdvantages />
+                       <GeneralBackground>
+                           <OurAdvantages/>
 
-                        <HowItWorks />
+                           <HowItWorks/>
 
-                        <MiningPlan />
+                           <MiningPlan/>
 
-                        {/*<ClientsReviews />*/}
+                           {/*<ClientsReviews />*/}
 
-                        <ContactForm />
-                    </GeneralBackground>
-                </section>
+                           <ContactForm/>
+                       </GeneralBackground>
+                   </section>
+               </CustomScrollbar>
             </Info>
-    )
-  }
+        );
+    }
 }
 
 export default App;
