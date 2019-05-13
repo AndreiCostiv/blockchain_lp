@@ -48,7 +48,10 @@
   text-align: center;
   font-family: Roboto-bold, sans-serif;
   font-size: 60px;
-  color: #fff; }
+  color: #fff;
+  font-family: CODAR, sans-serif;
+  font-size: 5vw;
+  font-weight: normal; }
   @media screen and (max-width: 880px) {
     .ContactFormHeader {
       margin: 0;
@@ -110,39 +113,58 @@
   margin: 0 auto 54px auto;
   cursor: default;
   color: #fff;
-  font-size: 11.68vw;
+  font-size: 9vw;
   font-family: CONTF, sans-serif;
   font-weight: normal;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .TryItButton {
-  width: 45%;
-  height: 120px;
+  width: 35%;
+  height: 100px;
   outline: 7px solid #fff;
   color: #ffffff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .TryItButton:hover {
     cursor: pointer; }
 
 .TryItButtonText {
   font-family: CONSOLA, sans-serif;
-  font-size: 5vw;
-  font-weight: normal; }
+  font-size: 4vw;
+  font-weight: normal;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
-.GeneralBackgroundBlock {
+#root {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
   background-image: url("../images/BackgoundImage.svg");
   background-size: cover;
   background-color: #3505BE;
-  background-repeat: no-repeat; }
+  background-repeat: repeat; }
+
+.app {
+  overflow: hidden; }
 
 .ThemeTrigger {
   width: 135px;
@@ -165,6 +187,13 @@
 .TriggerCircle {
   width: 55px;
   height: 55px;
+  outline-style: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 50%;
   background: rgba(0, 194, 255, 0.75);
   cursor: pointer; }
@@ -177,7 +206,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-between; }
 
 .HowItWorksText {
   width: 40%;
@@ -189,7 +218,7 @@
 
 .HowItWorksTitle {
   font-size: 2vw;
-  font-family: CODAB, sans-serif; }
+  font-family: CODAR, sans-serif; }
 
 .HowItWorksParagraph {
   color: #B0FFDE;
@@ -212,7 +241,7 @@
   font-family: Roboto-bold, sans-serif;
   font-size: 60px;
   color: #fff;
-  margin: 40px 0 0 0; }
+  margin: 40px 0; }
   @media screen and (max-width: 880px) {
     .MiningPlanComponentHeader {
       margin: 0;
@@ -360,7 +389,8 @@
   .HeaderComponentTitle {
     margin: 0 0 20px 0; }
   .TryItButton {
-    height: 37px; }
+    height: 37px;
+    outline: 4px solid #fff; }
   .TryItButtonImg {
     width: 20px;
     height: 20px; } }
@@ -404,14 +434,15 @@
     width: 100%;
     height: 202px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
     background-image: url("../images/ArticleImgMobile.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
   .HowItWorksText {
-    width: 100%;
+    width: 95%;
     height: auto;
+    margin: 0 auto;
     color: #fff;
     display: flex;
     flex-direction: column;

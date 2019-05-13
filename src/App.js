@@ -1,40 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //styles:
 import './css/main.css'
 
 //Components
-import {Info} from './Components/ContextAPI/Info';
-import HeaderComponent from './Components/HeaderComponent/HeaderComponent.js';
-import GeneralBackground from './Components/GeneralBackgroundComponent/GeneralBackground.js';
-import OurAdvantages from './Components/OurAdvantages/OurAdvantages.js';
-import HowItWorks from './Components/HowItWorks/HowItWorks.js';
-import MiningPlan from './Components/MiningPlan/MiningPlan.js';
-import ClientsReviews from './Components/ClientsReviews/ClientsReviews.js';
-import ContactForm from './Components/ContactForm/ContactForm.js';
+import CustomScrollbar from './Components/CustomScrollbar/CustomScrollbar';
+import Consumer, {Info} from './Components/ContextAPI/Info';
+import LightApp from './Components/LightApp/LightApp'
+import DarkApp from './Components/DarkApp/DarkApp'
 
-class App extends Component {
-    render() {
-        return (
-            <Info>
-                <section className="app">
-                    <HeaderComponent />
+import ThemeTrigger from './Components/HeaderComponent/ThemeTrigger/ThemeTrigger.js'
 
-                    <GeneralBackground>
-                        <OurAdvantages />
+const App = () => {
+    return(
+        <Info>
+            <CustomScrollbar>
+                <ThemeTrigger />
 
-                        <HowItWorks />
-
-                        <MiningPlan />
-
-                        {/*<ClientsReviews />*/}
-
-                        <ContactForm />
-                    </GeneralBackground>
-                </section>
-            </Info>
+                <Consumer>
+                    {
+                        context =>
+                            context.lightTheme ?
+                                <LightApp/>
+                                :
+                                <DarkApp />
+                    }
+                </Consumer>
+            </CustomScrollbar>
+        </Info>
     )
-  }
-}
+};
 
 export default App;

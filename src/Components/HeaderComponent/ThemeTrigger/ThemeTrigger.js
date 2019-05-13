@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Consumer from "../../ContextAPI/Info";
 
-class ThemeTrigger extends Component {
-    render() {
+const  ThemeTrigger  = () => {
         return (
             <Consumer>
                 {
@@ -17,12 +16,12 @@ class ThemeTrigger extends Component {
                             <TriggerBox
                                 Theme = {DarkTheme}
                                 TriggerMethod = {value.TriggerMethod}
-                        />
+                            />
                 }
             </Consumer>
         );
-    }
-}
+};
+
 
 const TriggerBox = (props) => (
     <section className = "ThemeTrigger">

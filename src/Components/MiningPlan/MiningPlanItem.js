@@ -3,7 +3,6 @@ import React from 'react'
 const MiningPlanItem = (props) => (
     <section className="MiningPlanItem">
         <h2 className="MiningName">{props.name}</h2>
-
         <p className="MiningCurrencies">{props.currencyValue}  {props.currencyType}</p>
 
         <section className="HashRare">
@@ -17,8 +16,5 @@ const MiningPlanItem = (props) => (
         <button className="BuyNow">Buy now</button>
     </section>
 );
-
-
-
 
 export default MiningPlanItem;
