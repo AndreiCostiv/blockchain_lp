@@ -9,7 +9,14 @@ class CustomScrollbar extends Component{
 
     render() {
         return (
-            <Scrollbars style = {{height: this.state.height, width: this.state.width}}>
+            <Scrollbars
+                universal
+                autoHide
+                style = {{
+                    height: this.state.height,
+                    width: this.state.width
+                }}
+            >
                 {this.props.children}
             </Scrollbars>
         );
