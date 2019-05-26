@@ -30,7 +30,14 @@ class Info extends Component{
                 price: "1999.00",
                 period: "per month"
             }
-        ]
+        ],
+        TryItClicked: false
+    };
+
+    ScrollbarController = () => {
+        this.setState({
+            TryItClicked: !this.state.TryItClicked
+        });
     };
 
     TriggerMethod = () =>{
@@ -45,7 +52,9 @@ class Info extends Component{
                 value = {{
                     lightTheme: this.state.lightTheme,
                     miningPlanData: this.state.miningPlanData,
-                    TriggerMethod: this.TriggerMethod
+                    ScrollbarController: this.ScrollbarController,
+                    TriggerMethod: this.TriggerMethod,
+                    TryItClicked: this.state.TryItClicked
                 }}>
                 {this.props.children}
             </Provider>

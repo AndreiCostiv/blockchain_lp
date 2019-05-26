@@ -24,7 +24,7 @@ const  ThemeTrigger  = () => {
 
 
 const TriggerBox = (props) => (
-    <section className = "ThemeTrigger">
+    <section className = "ThemeTrigger" style = {{display: 'none'}}>
         <section className="TriggerCircle" style = {props.Theme} onClick = {props.TriggerMethod}> </section>
     </section>
 );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import GrowingAdventage from './GrowingAdventage'
 import Safety from './Safety'
