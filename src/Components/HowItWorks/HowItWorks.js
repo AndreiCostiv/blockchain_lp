@@ -8,6 +8,20 @@ class HowItWorks extends Component{
         windowWidth: window.innerWidth
     };
 
+    updateHowItWorks = () => {
+        this.setState({
+            windowWidth: window.innerWidth
+        })
+    };
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateHowItWorks)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateHowItWorks)
+    }
+
     render() {
         return(
             <section className = "HowItWorksMainBox">

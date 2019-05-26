@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import HeaderComponentTitle from './HeaderComponentTitle'
 import TryItButton from './TryItButton'

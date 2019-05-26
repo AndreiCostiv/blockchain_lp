@@ -1,15 +1,84 @@
 @media screen and (max-width: 880px)
   .MiningPlanComponentHeader
-    margin: 15px 0 0 0
+    margin: 15px 0
+
+    font-size: 2.2em
+
+    letter-spacing: -0.06em
 
   .MiningPlanItem
-    width: 270px
-    height: 400px
+    width: 141px
+    height: 225px
 
     margin: 20px 0
 
-    &:nth-child(2)
-      width: 270px
-      height: 400px
+    justify-content: flex-start
 
-      justify-content: center
+    &:nth-child(1)
+      order: 2
+
+    &:nth-child(3)
+      order: 3
+
+    &:nth-child(2)
+      width: 163px
+      height: 240px
+
+      margin: 0 25%
+
+      order: 1
+      justify-content: flex-start
+
+      .MiningName
+        margin: 5px 0 0 0
+        font-size: 30px
+        letter-spacing: initial
+
+      .MiningPrice
+        margin: 0
+
+        font-size: 2em
+  .MiningPlanItemBlack
+    &:nth-child(2)
+      width: 141px
+      height: 211px
+
+      justify-content: flex-start
+
+      .MiningName
+        margin: 5px 0 0 0
+        font-size: 20px
+        letter-spacing: initial
+
+      .MiningPrice
+        margin: 0
+
+        font-size: 2em
+
+  .MiningName
+    margin: 5px 0 0 0
+    font-size: 20px
+
+  .MiningCurrencies
+    font-size: 0.55em
+    line-height: 13px
+    letter-spacing: 0.1em
+
+    margin: 0 0 5px 0
+  .HashRare
+    margin: 15px 0 5px 0
+
+  .HashRareTitle, .HashRareValue
+    font-size: 20px
+
+  .MiningPrice
+    font-size: 2em
+
+  .BuyNow
+    width: 75px
+    height: 35px
+
+    margin: 0 0 0 0
+    padding: 0
+
+    font-size: 15px

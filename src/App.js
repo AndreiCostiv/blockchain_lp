@@ -1,32 +1,22 @@
+//packages:
 import React from 'react';
+import Consumer, {Info} from './Components/ContextAPI/Info';
 
 //styles:
 import './css/main.css'
-
-//Components
-import CustomScrollbar from './Components/CustomScrollbar/CustomScrollbar';
-import Consumer, {Info} from './Components/ContextAPI/Info';
-import LightApp from './Components/LightApp/LightApp'
-import DarkApp from './Components/DarkApp/DarkApp'
-
-import ThemeTrigger from './Components/HeaderComponent/ThemeTrigger/ThemeTrigger.js'
+import LightComponents from "./Components/CustomScrollbar/CustomScrollbar";
+import { DarkComponents } from "./Components/CustomScrollbar/CustomScrollbar";
 
 const App = () => {
     return(
         <Info>
-            <CustomScrollbar>
-                <ThemeTrigger />
-
                 <Consumer>
                     {
-                        context =>
-                            context.lightTheme ?
-                                <LightApp/>
-                                :
-                                <DarkApp />
+                        context => (
+                            context.lightTheme ? <LightComponents /> : <DarkComponents />
+                        )
                     }
                 </Consumer>
-            </CustomScrollbar>
         </Info>
     )
 };

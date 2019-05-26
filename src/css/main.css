@@ -36,7 +36,7 @@
 .ContactForm {
   width: 100%;
   height: auto;
-  margin: 40px 0;
+  margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +61,7 @@
   font-family: CODAR, sans-serif;
   color: #fff;
   font-size: 3vw;
-  margin: 0 0 50px 0; }
+  margin: 0 0 30px 0; }
 
 .AwesomeFormBox {
   width: 800px;
@@ -71,11 +71,12 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .AwesomeFormInput {
-  width: 618px;
-  height: 74px;
+  width: 420px;
+  height: 44px;
+  margin: 0 30px 0 0;
   padding: 0 20px;
   background-color: transparent;
   color: #fff;
@@ -85,8 +86,8 @@
   border-radius: 50px 50px 50px 0; }
 
 .AwesomeFormButton {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 3px solid #FFFFFF;
   outline: none;
@@ -94,7 +95,7 @@
   background-image: url("../images/icons/Arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50px; }
+  background-size: 30px; }
   .AwesomeFormButton:hover {
     cursor: pointer; }
 
@@ -128,7 +129,7 @@
 
 .TryItButton {
   width: 35%;
-  height: 100px;
+  height: 80px;
   outline: 7px solid #fff;
   color: #ffffff;
   display: flex;
@@ -155,16 +156,18 @@
   -ms-user-select: none;
   user-select: none; }
 
-#root {
+.TryItButtonImg {
+  width: 40px;
+  height: 40px; }
+
+.app {
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding: 0 0 30px 0;
   background-image: url("../images/BackgoundImage.svg");
   background-size: cover;
   background-color: #3505BE;
   background-repeat: repeat; }
-
-.app {
-  overflow: hidden; }
 
 .ThemeTrigger {
   width: 135px;
@@ -229,10 +232,14 @@
 
 .HowItWorksImageBox {
   width: 50%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; }
 
 .HowItWorksImage {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .MiningPlanComponentHeader {
   width: 100%;
@@ -268,8 +275,8 @@
   .MiningPlanItem:nth-child(1) {
     background-image: linear-gradient(180deg, rgba(238, 0, 0, 0.2) 0%, rgba(220, 164, 82, 0) 100%); }
   .MiningPlanItem:nth-child(2) {
-    width: 320px;
-    height: 520px;
+    width: 400px;
+    height: 600px;
     background-image: linear-gradient(180deg, rgba(250, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
     justify-content: space-evenly; }
   .MiningPlanItem:nth-child(3) {
@@ -284,20 +291,31 @@
   justify-content: center;
   font-family: Roboto-bold, sans-serif;
   color: #fff;
-  font-size: 40px; }
+  font-size: 60px; }
+
+.MiningPlanItem:nth-child(2) .MiningName {
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin: 0 0 -35px 0; }
+
+.MiningPlanItem:nth-child(2) .MiningPrice {
+  margin: 0 0 -35px 0; }
 
 .MiningCurrencies {
   color: #ffffff;
   font-family: CODAR, sans-serif; }
 
 .orangeCurrencyValue {
-  color: #FFB800; }
+  color: #FFB800;
+  margin: 0 5px 0 0; }
 
 .greenCurrencyValue {
-  color: #00EF8B; }
+  color: #00EF8B;
+  margin: 0 5px 0 0; }
 
 .redCurrencyValue {
-  color: #FF0000; }
+  color: #FF0000;
+  margin: 0 5px 0 0; }
 
 .HashRare {
   width: 80%;
@@ -317,7 +335,7 @@
   margin: 0 0 0 0;
   color: #fff;
   font-family: freak-regular, sans-serif;
-  font-size: 35px; }
+  font-size: 55px; }
 
 .MiningPricePerPeriod {
   margin: 0 0 0 0;
@@ -341,9 +359,9 @@
   box-shadow: 1px 0 30px #3505BE, -1px 0 30px #3505BE; }
 
 .OurAdvantages {
-  width: 100%;
+  width: 98%;
   height: auto;
-  margin: 40px 0 40px 0;
+  margin: 40px auto;
   padding: 0;
   display: flex;
   align-items: center;
@@ -387,10 +405,11 @@
 
 @media screen and (max-width: 880px) {
   .HeaderComponentTitle {
-    margin: 0 0 20px 0; }
+    margin: 0 0 20px 0;
+    font-size: 3em; }
   .TryItButton {
-    height: 37px;
-    outline: 4px solid #fff; }
+    height: 30px;
+    outline: 2.5px solid #fff; }
   .TryItButtonImg {
     width: 20px;
     height: 20px; } }
@@ -461,32 +480,107 @@
 
 @media screen and (max-width: 880px) {
   .MiningPlanComponentHeader {
-    margin: 15px 0 0 0; }
+    margin: 15px 0;
+    font-size: 2.2em;
+    letter-spacing: -0.06em; }
   .MiningPlanItem {
-    width: 270px;
-    height: 400px;
-    margin: 20px 0; }
+    width: 141px;
+    height: 225px;
+    margin: 20px 0;
+    justify-content: flex-start; }
+    .MiningPlanItem:nth-child(1) {
+      order: 2; }
+    .MiningPlanItem:nth-child(3) {
+      order: 3; }
     .MiningPlanItem:nth-child(2) {
-      width: 270px;
-      height: 400px;
-      justify-content: center; } }
+      width: 163px;
+      height: 240px;
+      margin: 0 25%;
+      order: 1;
+      justify-content: flex-start; }
+      .MiningPlanItem:nth-child(2) .MiningName {
+        margin: 5px 0 0 0;
+        font-size: 30px;
+        letter-spacing: initial; }
+      .MiningPlanItem:nth-child(2) .MiningPrice {
+        margin: 0;
+        font-size: 2em; }
+  .MiningPlanItemBlack:nth-child(2) {
+    width: 141px;
+    height: 211px;
+    justify-content: flex-start; }
+    .MiningPlanItemBlack:nth-child(2) .MiningName {
+      margin: 5px 0 0 0;
+      font-size: 20px;
+      letter-spacing: initial; }
+    .MiningPlanItemBlack:nth-child(2) .MiningPrice {
+      margin: 0;
+      font-size: 2em; }
+  .MiningName {
+    margin: 5px 0 0 0;
+    font-size: 20px; }
+  .MiningCurrencies {
+    font-size: 0.55em;
+    line-height: 13px;
+    letter-spacing: 0.1em;
+    margin: 0 0 5px 0; }
+  .HashRare {
+    margin: 15px 0 5px 0; }
+  .HashRareTitle, .HashRareValue {
+    font-size: 20px; }
+  .MiningPrice {
+    font-size: 2em; }
+  .BuyNow {
+    width: 75px;
+    height: 35px;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-size: 15px; } }
 
 @media screen and (max-width: 880px) {
-  .ContactForm {
-    margin: 15px 0 30px 0; }
   .ContactFormTitle {
     margin: 0 0 20px 0; }
   .AwesomeFormBox {
-    width: 100%;
+    width: 80%;
     margin: 0;
     justify-content: center; }
   .AwesomeFormInput {
-    min-width: 240px;
     width: 60%;
     height: 29px;
+    margin: 0;
     font-size: 20px; }
   .AwesomeFormButton {
     width: 35px;
     height: 35px;
     margin: 0 0 0 17px;
     background-size: 20px; } }
+
+.appDarkTheme {
+  width: 100%;
+  height: auto;
+  padding: 0 0 30px 0;
+  background-image: url("../images/DarkBackgoundImage.svg");
+  background-size: cover;
+  background-color: #3505BE;
+  background-repeat: repeat; }
+
+.HowItWorksImageDark {
+  width: 100%;
+  filter: brightness(70%); }
+
+.MiningPlanItemDark {
+  border: 1px solid #fff; }
+  .MiningPlanItemDark:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(255, 77, 33, 0.25) 10%, rgba(255, 255, 255, 0) 50%); }
+  .MiningPlanItemDark:nth-child(2) {
+    width: 320px;
+    height: 520px;
+    background-image: linear-gradient(180deg, #646464 0%, rgba(255, 255, 255, 0) 100%);
+    justify-content: space-evenly; }
+  .MiningPlanItemDark:nth-child(3) {
+    background-image: linear-gradient(0, rgba(100, 100, 100, 0.25) 0%, rgba(220, 164, 82, 0.2) 100%); }
+
+.BuyNowDark {
+  background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
+  outline: 1px solid #000;
+  box-shadow: 1px 0 10px #fff, -1px 0 10px #fff; }

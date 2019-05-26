@@ -7,7 +7,8 @@ const MiningPlan = () => {
         <Consumer>
             {
                 value =>
-                    <React.Fragment>
+                    value.lightTheme ?
+                        <React.Fragment>
                         <h1 className="MiningPlanComponentHeader">Choose your mining plan</h1>
 
                         <section className="MiningPlan">
@@ -26,6 +27,26 @@ const MiningPlan = () => {
                             }
                         </section>
                     </React.Fragment>
+                        :
+                        <React.Fragment>
+                            <h1 className="MiningPlanComponentHeader">Choose your mining plan</h1>
+
+                            <section className="MiningPlan">
+                                {
+                                    value.miningPlanData.map((item, i) => (
+                                        <MiningPlanItem
+                                            key={i}
+                                            name={item.name}
+                                            currencyValue={item.currencyValue}
+                                            currencyType={item.currencyType}
+                                            hashRate={item.hashRate}
+                                            price={item.price}
+                                            period={item.period}
+                                        />
+                                    ))
+                                }
+                            </section>
+                        </React.Fragment>
             }
         </Consumer>
     );
