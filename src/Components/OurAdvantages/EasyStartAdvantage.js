@@ -2,7 +2,7 @@ import React from 'react';
 
 import TickTock from '../../images/icons/TickTock.svg'
 
-const EasyStartAdventage = () => (
+const EasyStartAdvantage = () => (
     <section className = "AdventageItem">
         <div className="AdventageItemIconBlock">
             <img src = {TickTock} alt = "svg" className="AdventageItemIcon"/>
@@ -20,4 +20,4 @@ const EasyStartAdventage = () => (
     </section>
 );
 
-export default EasyStartAdventage;
+export default EasyStartAdvantage;

@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops';
 
-import GrowingAdventage from './GrowingAdventage'
+import Consumer from '../ContextAPI/Info'
+import GrowingAdvantage from './GrowingAdvantage'
 import Safety from './Safety'
-import EasyStartAdventage from './EasyStartAdventage'
+import EasyStartAdvantage from './EasyStartAdvantage'
 
-const OurAdvantages = () => {
-    return (
-        <section className="OurAdvantages">
-            <GrowingAdventage />
-            <Safety />
-            <EasyStartAdventage />
-        </section>
-    )
+class OurAdvantages extends Component{
+    Handler  = () => {
+        
+    };
+
+    render() {
+        return (
+            <section className="OurAdvantages" onClick = {this.Handler}>
+                <Consumer>
+                    {
+                        context =>
+                            <React.Fragment>
+                                <GrowingAdvantage />
+                                <Safety />
+                                <EasyStartAdvantage />
+                            </React.Fragment>
+                    }
+                </Consumer>
+            </section>
+        )
+    }
 };
 
 export default OurAdvantages;
