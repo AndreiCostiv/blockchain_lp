@@ -1,13 +1,13 @@
 import React from 'react';
-
 import HeaderComponentTitle from './HeaderComponentTitle'
 import TryItButton from './TryItButton'
 
 
-const HeaderComponent = () => (
+const HeaderComponent = (props) => (
     <section className = "HeaderComponent">
         <HeaderComponentTitle />
-        <TryItButton />
+
+        <TryItButton scrollOnClick = {props.scrollOnClick}/>
     </section>
 );
 

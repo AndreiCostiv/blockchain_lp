@@ -2,7 +2,7 @@ import React from 'react';
 
 import ToTheMoon from '../../images/icons/ToTheMoon.svg'
 
-const GrowingAdventage = () => (
+const GrowingAdvantage = () => (
     <section className = "AdventageItem">
         <div className = "AdventageItemIconBlock">
             <img src = {ToTheMoon} alt = "svg" className="AdventageItemIcon"/>
@@ -20,4 +20,4 @@ const GrowingAdventage = () => (
     </section>
 );
 
-export default GrowingAdventage;
+export default GrowingAdvantage;

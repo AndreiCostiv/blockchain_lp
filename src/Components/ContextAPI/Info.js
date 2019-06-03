@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 export const {Consumer, Provider} = React.createContext();
 
 class Info extends Component{
@@ -34,16 +33,16 @@ class Info extends Component{
         TryItClicked: false
     };
 
-    ScrollbarController = () => {
-        this.setState({
-            TryItClicked: !this.state.TryItClicked
-        });
-    };
-
     TriggerMethod = () =>{
         this.setState({
             lightTheme: !this.state.lightTheme
         });
+    };
+
+    ChangeTryItClicked = () => {
+        this.setState({
+            TryItClicked: !this.state.TryItClicked
+        })
     };
 
     render() {
@@ -52,9 +51,9 @@ class Info extends Component{
                 value = {{
                     lightTheme: this.state.lightTheme,
                     miningPlanData: this.state.miningPlanData,
-                    ScrollbarController: this.ScrollbarController,
+                    TryItClicked: this.state.TryItClicked,
                     TriggerMethod: this.TriggerMethod,
-                    TryItClicked: this.state.TryItClicked
+                    ChangeTryItClicked: this.ChangeTryItClicked
                 }}>
                 {this.props.children}
             </Provider>
