@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import ThemeTrigger from "../HeaderComponent/ThemeTrigger/ThemeTrigger";
 import HeaderComponent from "../HeaderComponent/HeaderComponent";
@@ -9,21 +9,24 @@ import ContactForm from "../ContactForm/ContactForm";
 
 const LightApp = (props) => {
     return (
-        <section className="app">
+        <Fragment>
             <ThemeTrigger />
 
             <HeaderComponent scrollOnClick = {props.scrollOnClick}/>
 
-            <OurAdvantages/>
+            <section className="app">
 
-            <HowItWorks/>
+                <OurAdvantages/>
 
-            <MiningPlan/>
+                <HowItWorks/>
 
-            {/*<ClientsReviews />*/}
+                <MiningPlan/>
 
-            <ContactForm/>
-        </section>
+                {/*<ClientsReviews />*/}
+
+                <ContactForm/>
+            </section>
+        </Fragment>
     );
 };
 

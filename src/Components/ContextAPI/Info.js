@@ -4,6 +4,9 @@ export const {Consumer, Provider} = React.createContext();
 class Info extends Component{
     state = {
         lightTheme: true,
+        ScrollbarPosition: false,
+        TryItClicked: false,
+
         miningPlanData: [
             {
                 name: 'Bronze',
@@ -29,8 +32,7 @@ class Info extends Component{
                 price: "1999.00",
                 period: "per month"
             }
-        ],
-        TryItClicked: false
+        ]
     };
 
     TriggerMethod = () =>{
@@ -52,8 +54,9 @@ class Info extends Component{
                     lightTheme: this.state.lightTheme,
                     miningPlanData: this.state.miningPlanData,
                     TryItClicked: this.state.TryItClicked,
+                    ScrollbarPosition: this.state.ScrollbarPosition,
                     TriggerMethod: this.TriggerMethod,
-                    ChangeTryItClicked: this.ChangeTryItClicked
+                    ChangeTryItClicked: this.ChangeTryItClicked,
                 }}>
                 {this.props.children}
             </Provider>

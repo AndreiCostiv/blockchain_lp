@@ -1,12 +1,12 @@
 //packages:
 import React, { Component } from 'react';
-import Consumer, {Info} from './Components/ContextAPI/Info';
 
 //styles:
 import './css/main.css'
-import LightApp from "./Components/LightApp/LightApp";
-import DarkApp  from "./Components/DarkApp/DarkApp";
-import Scrollbars from "react-custom-scrollbars";
+
+//components:
+import CustomScrollbar from "./Components/CustomScrollbar/CustomScrollbar";
+import {Info} from "./Components/ContextAPI/Info";
 
 class App extends Component{
     constructor(props) {
@@ -48,28 +48,7 @@ class App extends Component{
     render() {
         return(
             <Info>
-                <Consumer>
-                    {
-                        context => (
-                            <Scrollbars
-                                universal
-                                autoHide
-                                ref = {this.CustomScrollbar}
-                                style = {{
-                                    height: this.state.height,
-                                    width: this.state.width
-                                }}
-                            >
-                                {
-                                    context.lightTheme ?
-                                        <LightApp scrollOnClick = {this.scrollOnClick}/>
-                                        :
-                                        <DarkApp scrollOnClick = {this.scrollOnClick}/>
-                                }
-                            </Scrollbars>
-                        )
-                    }
-                </Consumer>
+                <CustomScrollbar />
             </Info>
         );
     }

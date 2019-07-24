@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "particles.js": "^2.0.0",
     "react": "^16.8.6",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.6",
+    "react-particles-js": "^2.6.0",
     "react-scripts": "2.1.8",
-    "react-spring": "^8.0.20"
+    "react-spring": "^8.0.20",
+    "react-typing-animation": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
