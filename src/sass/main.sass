@@ -5,6 +5,14 @@
 //fonts
 @import "./fonts"
 
+//transparent scollbar
+::-webkit-scrollbar
+  width: 0px  // Remove scrollbar space 
+  background: transparent  // Optional: just make scrollbar invisible 
+
+::-webkit-scrollbar-thumb
+  background: transparent
+
 //desktop
 @import "./clientReviews"
 @import "./contactForm"
@@ -25,3 +33,5 @@
 
 //dark theme
 @import "./darkTheme"
+
+//light theme is default

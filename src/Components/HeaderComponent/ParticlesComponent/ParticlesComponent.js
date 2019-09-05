@@ -2,14 +2,15 @@ import React, { useState , useEffect} from 'react';
 import Particles from 'react-particles-js';
 
 const ParticlesComponent = () => {
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
+    const [width, setWidth] = useState(document.innerWidth);
+    const [height, setHeight] = useState(document.innerHeight);
 
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-    });
+    useEffect(
+        () => {
+            setWidth(document.innerWidth);
+            setHeight(document.innerHeight);
+        });
 
     return(
         <Particles

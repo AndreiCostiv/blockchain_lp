@@ -12,7 +12,7 @@ const LightApp = (props) => {
         <Fragment>
             <ThemeTrigger />
 
-            <HeaderComponent scrollOnClick = {props.scrollOnClick}/>
+            <HeaderComponent />
 
             <section className="app">
 
