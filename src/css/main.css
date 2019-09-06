@@ -95,6 +95,7 @@
 .AwesomeFormButton {
   width: 50px;
   height: 50px;
+  position: static;
   border-radius: 50%;
   border: 3px solid #FFFFFF;
   outline: none;
@@ -183,6 +184,7 @@
   position: absolute;
   top: 34px;
   right: 27px;
+  cursor: pointer;
   border: 3px solid #fff;
   border-radius: 31.5px;
   display: flex;
@@ -200,8 +202,7 @@
   margin: auto 0;
   outline-style: none;
   border-radius: 50%;
-  background: rgba(0, 194, 255, 0.75);
-  cursor: pointer; }
+  background: rgba(0, 194, 255, 0.75); }
 
 .HowItWorksMainBox {
   width: 95%;
@@ -347,8 +348,10 @@
   color: rgba(176, 255, 222, 0.8); }
 
 .BuyNow {
+  width: auto;
   margin: 15px 0 0 0;
   padding: 0 10px;
+  position: static;
   cursor: pointer;
   background-image: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
   border: none;

@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@glidejs/glide": "^3.3.0",
     "particles.js": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-glide": "^3.2.0",
     "react-particles-js": "^2.6.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
     "react-spring": "^8.0.20",
     "react-typing-animation": "^1.6.2"

@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 
-import ClientReviewItem from './ClientReviewItem'
+import SliderComponent from '../SliderComponent/SliderComponent'
 
-class ClientReviews extends Component {
-    render() {
-
-
-        return(
-            <section className = "ClientReviews">
-                <h1 className="ClientReviewsHeader">Our client reviews</h1>
-
-                <ClientReviewItem />
-            </section>
-        )
-    }
+const ClientsReviews = () => {
+    return(
+        <section className = "ClientReviews">
+            <h1 className="ClientReviewsHeader">Our client reviews</h1>
+            <SliderComponent/>
+        </section>
+    )
 }
 
-export default ClientReviews;
+export default ClientsReviews;

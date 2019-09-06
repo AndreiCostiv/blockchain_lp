@@ -48,8 +48,8 @@ const TriggerBox = ({TriggerMethod, ...props}) => {
     return(
         <Spring {...props}>
             {springStyle => (
-                <section className = "ThemeTrigger">
-                    <section style = {springStyle} className="TriggerCircle" onClick = {TriggerMethod} />
+                <section onClick = {TriggerMethod}  className = "ThemeTrigger">
+                    <section style = {springStyle} className="TriggerCircle" />
                 </section>
             )}
         </Spring> 
