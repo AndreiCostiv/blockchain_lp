@@ -1,28 +1,47 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Particles from 'react-particles-js';
 
 const ParticlesComponent = ({children}) => {
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
+    const size = useWindowSize();
 
-
-    useEffect(
-        () => {
-            setWidth(window.innerWidth);
-            setHeight(window.innerHeight);
-        });
+    function useWindowSize() {
+        const isClient = typeof window === 'object';
+      
+        function getSize() {
+          return {
+            width: isClient ? window.innerWidth : undefined,
+            height: isClient ? window.innerHeight : undefined
+          };
+        }
+      
+        const [windowSize, setWindowSize] = useState(getSize);
+      
+        useEffect(() => {
+          if (!isClient) {
+            return false;
+          }
+          
+          function handleResize() {
+            setWindowSize(getSize());
+          }
+      
+          window.addEventListener('resize', handleResize);
+          return () => window.removeEventListener('resize', handleResize);
+        }, []); // Empty array ensures that effect is only run on mount and unmount
+      
+        return windowSize;
+    }
 
     return(
        <section className = 'HeaderComponent'>
             <Particles
-                width = {width}
-                
+                width = {size.width}
+                height = {size.height}
                 style = {ParticlesCustomStyle}
-
                 params = {{
                     particles: {
                         number: {
-                            value: 120
+                            value: size.width <= 800 ?  ((size.height + size.width) / 50) : 120
                         },
                         color: {
                             value: '#2659E2'
@@ -41,7 +60,6 @@ const ParticlesComponent = ({children}) => {
                     retina_detect: true
                 }}
             />
-
             { children }
        </section>
     )

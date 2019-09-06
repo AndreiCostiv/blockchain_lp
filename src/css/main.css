@@ -172,6 +172,9 @@
   background-size: cover;
   background-color: #3505BE;
   background-repeat: repeat; }
+  @media screen and (max-width: 880px) {
+    .app {
+      margin: -56px 0 0 0; } }
 
 .ThemeTrigger {
   width: 135px;
@@ -421,8 +424,8 @@
     background-position-x: 25px;
     background-position-y: 0; }
   .TriggerCircle {
-    width: 17px;
-    height: 17px; } }
+    width: 18px;
+    height: 18px; } }
 
 @media screen and (max-width: 880px) {
   .OurAdvantages {

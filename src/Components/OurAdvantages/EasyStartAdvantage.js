@@ -1,5 +1,4 @@
 import React from 'react';
-import {Spring} from 'react-spring/renderprops';
 
 import TickTock from '../../images/icons/TickTock.svg'
 
