@@ -4,14 +4,11 @@ import ParticlesComponent from './ParticlesComponent/ParticlesComponent'
 import HeaderComponentTitle from './HeaderComponentTitle'
 import TryItButton from './TryItButton'
 
-const HeaderComponent = (props) => (
-    <section className = "HeaderComponent">
-        <ParticlesComponent />
-
-        <HeaderComponentTitle />
-
-        <TryItButton scrollOnClick = {props.scrollOnClick}/>
-    </section>
+const HeaderComponent = () => (
+    <ParticlesComponent >
+        <HeaderComponentTitle />   
+        <TryItButton/>
+    </ParticlesComponent>
 );
 
 export default HeaderComponent;
