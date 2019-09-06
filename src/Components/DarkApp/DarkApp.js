@@ -1,29 +1,29 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-import ThemeTrigger from "../HeaderComponent/ThemeTrigger/ThemeTrigger";
 import HeaderComponent from "../HeaderComponent/HeaderComponent";
 import OurAdvantages from "../OurAdvantages/OurAdvantages";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import MiningPlan from "../MiningPlan/MiningPlan";
 import ContactForm from "../ContactForm/ContactForm";
 
-const DarkApp = (props) => {
+const DarkApp = () => {
     return (
-        <section className='appDarkTheme'>
-            <ThemeTrigger/>
+       <Fragment>
+           <HeaderComponent />
+           
+           <section className='appDarkTheme'>
 
-            <HeaderComponent scrollOnClick={props.scrollOnClick}/>
+                <OurAdvantages/>
 
-            <OurAdvantages/>
+                <HowItWorks/>
 
-            <HowItWorks/>
+                <MiningPlan/>
 
-            <MiningPlan/>
+                {/*<ClientsReviews />*/}
 
-            {/*<ClientsReviews />*/}
-
-            <ContactForm/>
-        </section>
+                <ContactForm/>
+            </section>
+       </Fragment>
     );
 };
 

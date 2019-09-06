@@ -175,7 +175,7 @@
 
 .ThemeTrigger {
   width: 135px;
-  height: 57px;
+  height: 58px;
   padding: 0 4px;
   position: absolute;
   top: 34px;
@@ -183,24 +183,19 @@
   border: 3px solid #fff;
   border-radius: 31.5px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background-image: url("../images/icons/ThemeIcon.svg");
   background-repeat: no-repeat;
   background-position-x: 84px;
   background-position-y: 7px; }
 
 .TriggerCircle {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
+  margin: auto 0;
   outline-style: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   border-radius: 50%;
   background: rgba(0, 194, 255, 0.75);
   cursor: pointer; }
@@ -365,8 +360,8 @@
 .OurAdvantages {
   width: 98%;
   height: auto;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0 auto 50px auto;
+  padding: 30px 0 0 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

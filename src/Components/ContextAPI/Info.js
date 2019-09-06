@@ -36,6 +36,8 @@ class Info extends Component{
     };
 
     TriggerMethod = () =>{
+        console.log('clicked')
+
         this.setState({
             lightTheme: !this.state.lightTheme
         });
