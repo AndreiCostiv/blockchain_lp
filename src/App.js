@@ -1,5 +1,5 @@
 //packages:
-import React, { useContext, Component } from 'react';
+import React from 'react';
 
 //styles:
 import './css/main.css'
