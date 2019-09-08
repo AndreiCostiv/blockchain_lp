@@ -1,6 +1,9 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
 
 @font-face {
   font-family: CONTF;
@@ -30,15 +33,28 @@
   font-family: Roboto-bold;
   src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"); }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; }
+@font-face {
+  font-family: Tahoma;
+  src: url("../fonts/Tahoma.ttf") format("truetype"); }
 
-::-webkit-scrollbar-thumb {
-  background: transparent; }
+.ClientReviews {
+  width: 100%;
+  height: auto;
+  margin: 0 0 165px 0; }
 
-.SlickSlider {
-  margin: 20px 0; }
+.ClientReviewsHeader {
+  width: 100%;
+  margin: 124px 0 84px 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 81px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF; }
+  @media screen and (max-width: 880px) {
+    .ClientReviewsHeader {
+      font-size: 32px; } }
 
 .ContactForm {
   width: 100%;
@@ -589,3 +605,185 @@
   background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
   outline: 1px solid #000;
   box-shadow: 1px 0 10px #fff, -1px 0 10px #fff; }
+
+.glider-contain {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+.glider {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  transform: translateZ(0); }
+
+.glider-track {
+  transform: translateZ(0);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1; }
+
+.glider.draggable {
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.glider.draggable .glider-slide img {
+  user-select: none;
+  pointer-events: none; }
+
+.glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+.glider-slide {
+  user-select: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%; }
+
+.glider-slide img {
+  max-width: 100%; }
+
+.glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0; }
+
+.glider-prev, .glider-next {
+  user-select: none;
+  position: absolute;
+  outline: none;
+  background: none;
+  padding: 0;
+  z-index: 2;
+  font-size: 40px;
+  text-decoration: none;
+  left: -23px;
+  border: 0;
+  top: 30%;
+  cursor: pointer;
+  color: #666;
+  opacity: 1;
+  line-height: 1;
+  transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67), color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+
+.glider-prev:hover,
+.glider-next:hover,
+.glider-prev:focus,
+.glider-next:focus {
+  color: #a89cc8; }
+
+.glider-next {
+  right: -23px;
+  left: auto; }
+
+.glider-next.disabled,
+.glider-prev.disabled {
+  opacity: .25;
+  color: #666;
+  cursor: default; }
+
+.glider-slide {
+  min-width: 150px; }
+
+.glider-hide {
+  opacity: 0; }
+
+.glider-dots {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0; }
+
+.glider-dot {
+  background: none;
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 999px;
+  background: #ccc;
+  width: 12px;
+  height: 12px;
+  margin: 7px; }
+
+.glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+  background: #a89cc8; }
+
+@media (max-width: 36em) {
+  .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none;
+    width: 7px;
+    height: 3px; }
+  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(156, 156, 156, 0.25);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25); } }
+
+.glider-slide {
+  margin: 0 50px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #fff; }
+
+.clientReview {
+  font-family: Thahoma, sans-serif;
+  font-size: 18px; }
+  .clientReview::first-letter {
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    text-transform: uppercase; }
+
+.clientProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+
+.clientPhoto {
+  width: 95px;
+  height: 95px; }
+
+.clientTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+
+.clientName {
+  margin: 0 0 0 24px;
+  font-family: Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px; }
+
+.clientJob {
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #9A9A9A; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #fff; }

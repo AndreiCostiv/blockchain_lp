@@ -11,14 +11,13 @@ import Consumer from './Components/ContextAPI/Info';
 import ThemeTrigger from './Components/ThemeTrigger/ThemeTrigger';
 import LightApp from './Components/LightApp/LightApp';
 import DarkApp from './Components/DarkApp/DarkApp';
-import ClientsReviews from './Components/ClientsReviews/ClientsReviews';
 
 const App = () => {
     return(
         <Router>
             <Info>
                 <Switch>
-                    <Route exact path = '/' render = { () => (
+                    <Route path = '/' render = { () => (
                         <Fragment>        
                             <ThemeTrigger/>
                                     
@@ -28,7 +27,6 @@ const App = () => {
                         </Fragment>
                     ) }/>
                 </Switch>                
-
             </Info>
         </Router>  
     )

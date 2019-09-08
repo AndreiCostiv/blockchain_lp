@@ -7,7 +7,7 @@
     "particles.js": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-glide": "^3.2.0",
+    "react-glider-carousel": "^0.1.2",
     "react-particles-js": "^2.6.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
