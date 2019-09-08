@@ -1,25 +1,34 @@
 //packages:
-import React from 'react';
+import React, { Fragment } from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 //styles:
 import './css/main.css'
 
 //components:
-import {Info} from "./Components/ContextAPI/Info";
-import Consumer from "./Components/ContextAPI/Info";
+import {Info} from './Components/ContextAPI/Info';
+import Consumer from './Components/ContextAPI/Info';
 import ThemeTrigger from './Components/ThemeTrigger/ThemeTrigger';
 import LightApp from './Components/LightApp/LightApp';
 import DarkApp from './Components/DarkApp/DarkApp';
 
 const App = () => {
     return(
-        <Info>
-            <ThemeTrigger/>
-            
-            <Consumer>
-                { context => context.lightTheme ? <LightApp/> : <DarkApp/> }
-            </Consumer>
-        </Info>
+        <Router>
+            <Info>
+                <Switch>
+                    <Route path = '/' render = { () => (
+                        <Fragment>        
+                            <ThemeTrigger/>
+                                    
+                            <Consumer>
+                                { context => context.lightTheme ? <LightApp/> : <DarkApp/> }
+                            </Consumer>
+                        </Fragment>
+                    ) }/>
+                </Switch>                
+            </Info>
+        </Router>  
     )
 }
 

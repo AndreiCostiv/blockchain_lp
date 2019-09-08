@@ -1,17 +1,12 @@
 *
   margin: 0
   padding: 0
+  scrollbar-width: none
+  -ms-overflow-style: none
+  scrollbar-width: none 
 
 //fonts
 @import "./fonts"
-
-//transparent scollbar
-::-webkit-scrollbar
-  width: 0px  // Remove scrollbar space 
-  background: transparent  // Optional: just make scrollbar invisible 
-
-::-webkit-scrollbar-thumb
-  background: transparent
 
 //desktop
 @import "./clientReviews"
@@ -35,3 +30,12 @@
 @import "./darkTheme"
 
 //light theme is default
+
+//custom slider
+//default styles
+@import "./glider"
+//custom styles
+@import "./gliderSlider"
+
+//custom scollbar
+@import "./customScrollbar"
