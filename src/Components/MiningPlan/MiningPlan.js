@@ -9,7 +9,7 @@ const MiningPlan = () => {
                 value =>
                     value.lightTheme ?
                         <React.Fragment>
-                            <h1 className="MiningPlanComponentHeader">Choose your mining plan</h1>
+                            <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
 
                             <section className="MiningPlan">
                                 {
@@ -29,7 +29,7 @@ const MiningPlan = () => {
                         </React.Fragment>
                         :
                         <React.Fragment>
-                            <h1 className="MiningPlanComponentHeader">Choose your mining plan</h1>
+                            <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
 
                             <section className="MiningPlan">
                                 {

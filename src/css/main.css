@@ -40,11 +40,11 @@
 .ClientReviews {
   width: 100%;
   height: auto;
-  margin: 0 0 165px 0; }
+  margin: 40px 0; }
 
 .ClientReviewsHeader {
   width: 100%;
-  margin: 124px 0 84px 0;
+  margin: 10px 0;
   text-align: center;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -59,7 +59,6 @@
 .ContactForm {
   width: 100%;
   height: auto;
-  margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,7 +335,7 @@
   color: #FF0000;
   margin: 0 5px 0 0; }
 
-.HashRare {
+.HashRate {
   width: 80%;
   margin: 25px 0 30px 0;
   outline: 1px solid #fff;
@@ -345,7 +344,7 @@
   align-items: center;
   justify-content: center; }
 
-.HashRareTitle, .HashRareValue {
+.HashRateTitle, .HashRateValue {
   font-family: CODAR, sans-serif;
   color: #fff;
   font-size: 40px; }
@@ -541,24 +540,27 @@
     margin: 5px 0 0 0;
     font-size: 20px; }
   .MiningCurrencies {
-    font-size: 0.55em;
+    margin: 0 0 5px 0;
+    font-size: 8px;
     line-height: 13px;
-    letter-spacing: 0.1em;
-    margin: 0 0 5px 0; }
-  .HashRare {
+    letter-spacing: 0.1em; }
+  .HashRate {
     margin: 15px 0 5px 0; }
-  .HashRareTitle, .HashRareValue {
+  .HashRateTitle, .HashRateValue {
     font-size: 20px; }
   .MiningPrice {
     font-size: 2em; }
   .BuyNow {
     width: 75px;
-    height: 35px;
+    height: 30px;
     margin: 0 0 0 0;
     padding: 0;
-    font-size: 15px; } }
+    font-size: 15px;
+    box-shadow: none; } }
 
 @media screen and (max-width: 880px) {
+  .ContactForm {
+    padding: 0 0 20px 0; }
   .ContactFormTitle {
     margin: 0 0 20px 0; }
   .AwesomeFormBox {
@@ -579,11 +581,14 @@
 .appDarkTheme {
   width: 100%;
   height: auto;
-  padding: 0 0 30px 0;
+  padding: 0;
   background-image: url("../images/DarkBackgoundImage.svg");
   background-size: cover;
   background-color: #3505BE;
   background-repeat: repeat; }
+  @media screen and (max-width: 880px) {
+    .appDarkTheme {
+      margin: -56px 0 0 0; } }
 
 .HowItWorksImageDark {
   width: 100%;
@@ -604,7 +609,7 @@
 .BuyNowDark {
   background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
   outline: 1px solid #000;
-  box-shadow: 1px 0 10px #fff, -1px 0 10px #fff; }
+  box-shadow: 1px 0 10px transparent, -1px 0 10px transparent; }
 
 .glider-contain {
   width: 100%;
