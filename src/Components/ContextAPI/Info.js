@@ -5,7 +5,6 @@ class Info extends Component{
     state = {
         lightTheme: true,
         ScrollbarPosition: false,
-        TryItClicked: false,
 
         miningPlanData: [
             {
@@ -36,17 +35,16 @@ class Info extends Component{
     };
 
     TriggerMethod = () =>{
-        console.log('clicked')
-
         this.setState({
             lightTheme: !this.state.lightTheme
         });
     };
 
     ChangeTryItClicked = () => {
-        this.setState({
-            TryItClicked: !this.state.TryItClicked
-        })
+        window.scrollTo({
+            top: document.body.clientHeight,
+            behavior: 'smooth'
+        });
     };
 
     render() {
@@ -55,7 +53,6 @@ class Info extends Component{
                 value = {{
                     lightTheme: this.state.lightTheme,
                     miningPlanData: this.state.miningPlanData,
-                    TryItClicked: this.state.TryItClicked,
                     ScrollbarPosition: this.state.ScrollbarPosition,
                     TriggerMethod: this.TriggerMethod,
                     ChangeTryItClicked: this.ChangeTryItClicked,

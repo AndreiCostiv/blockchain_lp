@@ -15,28 +15,54 @@ const  ThemeTrigger  = () => {
                 <TriggerBox
                     TriggerMethod = {value.TriggerMethod}
                     to = { value.lightTheme ? 
-                        {marginLeft: 0}
+                        {
+                            marginLeft: 0, 
+                            backgroundColor: 'rgba(0, 194, 255, 0.75)'
+                        }
                             :
-                        {marginLeft: 77}
+                        {
+                            marginLeft: 77,
+                            backgroundColor: 'rgba(176, 255, 222, 0.75)'
+                        }
                     }
+
+
                     leave = { value.lightTheme ?
-                        {marginLeft: 0}
+                        {
+                            marginLeft: 0, 
+                            backgroundColor: 'rgba(0, 194, 255, 0.75)'
+                        }
                             :
-                        {marginLeft: 77}
+                        {
+                            marginLeft: 77,
+                            backgroundColor: 'rgba(176, 255, 222, 0.75)'
+                        }
                     }
                 />        
                     : 
                 <TriggerBox
                     TriggerMethod = {value.TriggerMethod}
                     to = { value.lightTheme ? 
-                        {marginLeft: 0}
+                        {
+                            marginLeft: 0, 
+                            backgroundColor: 'rgba(0, 194, 255, 0.75)'
+                        }
                             :
-                        {marginLeft: 22}
+                        {
+                            marginLeft: 22,
+                            backgroundColor: 'rgba(176, 255, 222, 0.75)'
+                        }
                     }
                     leave = { value.lightTheme ?
-                        {marginLeft: 0}
+                        {   
+                            marginLeft: 0, 
+                            backgroundColor: 'rgba(0, 194, 255, 0.75)'
+                        }
                             :
-                        {marginLeft: 22}
+                        {
+                            marginLeft: 22,
+                            backgroundColor: 'rgba(176, 255, 222, 0.75)'
+                        }
                     }
                 /> 
         }

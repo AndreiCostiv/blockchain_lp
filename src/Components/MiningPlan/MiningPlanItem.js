@@ -6,7 +6,7 @@ const MiningPlanItem = (props) => (
         {
             context =>
                 <section className = {context.lightTheme ? "MiningPlanItem" : "MiningPlanItem MiningPlanItemDark"}>
-                    <h2 className="MiningName">{props.name}</h2>
+                    <h3 className="MiningName">{props.name}</h3>
 
                     {
                         props.currencyValue < 5 &&
@@ -39,12 +39,12 @@ const MiningPlanItem = (props) => (
                         </p>
                     }
 
-                    <section className="HashRare">
-                        <h2 className="HashRareTitle">Hashrate</h2>
-                        <p className="HashRareValue">{props.hashRate}</p>
+                    <section className="HashRate">
+                        <h4 className="HashRateTitle">Hashrate</h4>
+                        <p className="HashRateValue">{props.hashRate}</p>
                     </section>
 
-                    <h1 className="MiningPrice">{props.price} $</h1>
+                    <h4 className="MiningPrice">{props.price} $</h4>
                     <p className="MiningPricePerPeriod">{props.period} </p>
 
                     <button className =  {context.lightTheme ? "BuyNow" : "BuyNow BuyNowDark"}>Buy now</button>

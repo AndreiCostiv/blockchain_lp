@@ -9,7 +9,7 @@ const ContactForm = () => (
 
 const FormTextContent = () => (
     <React.Fragment >
-        <h1 className="ContactFormHeader">Still have some questions?</h1>
+        <h2 className="ContactFormHeader">Still have some questions?</h2>
         <p className="ContactFormTitle">Leave us your number and we will call you</p>
     </React.Fragment>
 );

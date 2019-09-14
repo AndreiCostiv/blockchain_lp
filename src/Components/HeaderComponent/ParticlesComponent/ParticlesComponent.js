@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// pakage
+// package
 import Particles from 'react-particles-js';
 
 // custom hook
 import useWindowSize from '../../CustomHooks/useWindowSize'
 
-const ParticlesComponent = ({children}) => {
+const ParticlesComponent = ({ children, lightTheme }) => {
     const size = useWindowSize();
+    const [particlesColor, setParticlesColor] = useState(lightTheme ? '#2659E2' : '#B0FFDE')
+
+    useEffect (() => {
+        setParticlesColor(lightTheme ? '#2659E2' : '#B0FFDE')
+    })
 
     return(
        <section className = 'HeaderComponent'>
@@ -20,8 +25,8 @@ const ParticlesComponent = ({children}) => {
                         number: {
                             value: size.width <= 800 ?  ((size.height + size.width) / 50) : 120
                         },
-                        color: {
-                            value: '#2659E2'
+                        color: {                        
+                            value: particlesColor
                         },
                         size: {
                             value: 5,
@@ -29,7 +34,7 @@ const ParticlesComponent = ({children}) => {
                         },
                         line_linked: {
                             enable_auto: true,
-                            color: '#2659E2',
+                            color: particlesColor,
                             opacity: '1',
                             width: '5'
                         }
