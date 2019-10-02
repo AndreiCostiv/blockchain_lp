@@ -4,8 +4,7 @@ import React, {useState} from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
 //component:
-import CharComponent from './CharComponent'
-
+import CharComponent from '../CharComponent/CharComponent';
 
 const
     Title = `HOW IT WORKS?`,
@@ -29,7 +28,7 @@ const HowItWorksText = () => {
     const arrTitle = Array.from(Title);
 
     return (
-        <VisibilitySensor onChange = {isItVisible}>
+        <VisibilitySensor onChange = {isItVisible} partialVisibility = {true}>
             <section className = "HowItWorksText">
                 
                 <h1 className="HowItWorksTitle" >

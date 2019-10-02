@@ -26,7 +26,7 @@ const HowItWorksImage = () => {
     });
 
     return(
-        <VisibilitySensor onChange = {IsItVisible}>
+        <VisibilitySensor onChange = {IsItVisible} partialVisibility = {true}>
             <section className = "HowItWorksImageBox">
                 <Consumer>
                     {

@@ -1,5 +1,9 @@
 import React from 'react';
+
+//context:
 import Consumer from '../ContextAPI/Info'
+
+//component:
 import MiningPlanItem from './MiningPlanItem'
 
 const MiningPlan = () => {
@@ -14,13 +18,15 @@ const MiningPlan = () => {
                             {
                                 value.miningPlanData.map((item, i) => (
                                     <MiningPlanItem
-                                        key={i}
-                                        name={item.name}
-                                        currencyValue={item.currencyValue}
-                                        currencyType={item.currencyType}
-                                        hashRate={item.hashRate}
-                                        price={item.price}
-                                        period={item.period}
+                                        key = {i}
+                                        i = {i}
+                                        name = {item.name}
+                                        lightTheme   = {value.lightTheme}
+                                        currencyValue = {item.currencyValue}
+                                        currencyType = {item.currencyType}
+                                        hashRate = {item.hashRate}
+                                        price = {item.price}
+                                        period = {item.period}
                                     />
                                 ))
                             }

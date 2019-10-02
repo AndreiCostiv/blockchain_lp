@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 //components:
 import SliderComponent from '../SliderComponent/SliderComponent';
-import CharComponent from '../HowItWorks/CharComponent';
+import CharComponent from '../CharComponent/CharComponent';
 
 //package:
 import VisibilitySensor from 'react-visibility-sensor';

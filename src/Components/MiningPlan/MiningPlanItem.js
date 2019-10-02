@@ -1,57 +1,70 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-//context:
-import Consumer from '../ContextAPI/Info';
+//packages:
+import VisibilitySensor from 'react-visibility-sensor';
+import {useSpring, animated} from 'react-spring';
 
-const MiningPlanItem = (props) => (
-    <Consumer>
-        {
-            context =>
-                <section className = {context.lightTheme ? "MiningPlanItem" : "MiningPlanItem MiningPlanItemDark"}>
-                    <h3 className="MiningName">{props.name}</h3>
+const MiningPlanItem = (props) => {
+    const {lightTheme, name, currencyValue, currencyType, hashRate, price, period, i} = props;
 
-                    {
-                        props.currencyValue < 5 &&
-                        <p className="MiningCurrencies ">
-                            <span className="redCurrencyValue">
-                                {props.currencyValue}
-                            </span>
+    const [toAnimate, setToAnimate] = useState(false);
 
-                            {props.currencyType}
-                        </p>
-                    }
-                    {
-                        props.currencyValue >= 5 && props.currencyValue < 10 &&
-                        <p className="MiningCurrencies">
-                            <span className="orangeCurrencyValue">
-                                {props.currencyValue}
-                            </span>
-
-                            {props.currencyType}
-                        </p>
-                    }
-                    {
-                        props.currencyValue >= 10 && props.currencyValue >= 5 &&
-                        <p className="MiningCurrencies">
-                            <span className="greenCurrencyValue">
-                                {props.currencyValue}
-                            </span>
-
-                            {props.currencyType}
-                        </p>
-                    }
-
-                    <section className="HashRate">
-                        <h4 className="HashRateTitle">Hashrate</h4>
-                        <p className="HashRateValue">{props.hashRate}</p>
-                    </section>
-
-                    <h4 className="MiningPrice">{props.price} $</h4>
-                    <p className="MiningPricePerPeriod">{props.period} </p>
-
-                    <button className =  {context.lightTheme ? "BuyNow" : "BuyNow BuyNowDark"}>Buy now</button>
-                </section>
+    const IsItVisible = (isVisible) => 
+        isVisible === undefined ? setToAnimate(false) : setToAnimate(isVisible) 
+    
+    //sorting currency to their classes:
+    const getClassForCurrencyValue = (value) => {
+        if(value >= 0 && value < 5) {
+            return 'redCurrencyValue'
         }
-    </Consumer>
-);
+        else if(value >= 5 && value < 10) {
+            return 'orangeCurrencyValue'
+        }
+        else if(value >= 10) {
+            return 'greenCurrencyValue'
+        }
+        else {
+            return 'redCurrencyValue'
+        }
+    };
+
+    //animation config:
+    const springConf = useSpring({
+        from: {opacity: toAnimate ? 0 : 1},
+        to: {opacity: toAnimate ? 1 : 0},
+        config: {duration: 250},
+        delay: toAnimate ? (i * 200) : 0 
+    });
+
+    return(
+        <VisibilitySensor partialVisibility = {true} onChange = {IsItVisible}>
+            <animated.section style = {springConf} 
+                className = {
+                    lightTheme ? "MiningPlanItem" : "MiningPlanItem MiningPlanItemDark"
+                }
+            >
+                <h3 className="MiningName">{name}</h3>
+                
+                {<p className="MiningCurrencies ">
+                    <span className = {getClassForCurrencyValue(currencyValue)}>
+                        {currencyValue}
+                    </span>
+        
+                    {currencyType}
+                </p>}
+                    
+                <section className="HashRate">
+                    <h4 className="HashRateTitle">Hashrate</h4>
+                    <p className="HashRateValue">{hashRate}</p>
+                </section>
+                    
+                <h4 className="MiningPrice">{price} $</h4>
+                <p className="MiningPricePerPeriod">{period} </p>
+        
+                <button className =  {lightTheme ? "BuyNow" : "BuyNow BuyNowDark"}>Buy now</button>
+            </animated.section>
+        </VisibilitySensor>
+    );
+};
+
 export default MiningPlanItem;
