@@ -1,36 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+//components
 import HowItWorksText from './HowItWorksText';
 import HowItWorksImage from './HowItWorksImage';
 
-class HowItWorks extends Component{
-    state = {
-        windowWidth: window.innerWidth
-    };
+//custom hook:
+import useWindowSize from '../CustomHooks/useWindowSize';
 
-    updateHowItWorks = () => {
-        this.setState({
-            windowWidth: window.innerWidth
-        })
-    };
+const HowItWorks = () => {
+    const {width} = useWindowSize()
 
-    componentDidMount() {
-        window.addEventListener('resize', this.updateHowItWorks)
-    }
+    return(
+        <section className = "HowItWorksMainBox">
+            <HowItWorksText />
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateHowItWorks)
-    }
-
-    render() {
-        return(
-            <section className = "HowItWorksMainBox">
-                <HowItWorksText />
-
-                {this.state.windowWidth >= 880 && <HowItWorksImage />}
-            </section>
-        )
-    }
-}
+            {width >= 880 && <HowItWorksImage />}
+        </section>
+    )
+};
 
 export default HowItWorks;

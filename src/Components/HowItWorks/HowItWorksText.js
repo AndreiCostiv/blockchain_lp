@@ -1,34 +1,64 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 
-const Paragraph =
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-    anim id est laborum.`;
+//package:
+import VisibilitySensor from 'react-visibility-sensor';
 
-class HowItWorksText extends Component{
+//component:
+import CharComponent from './CharComponent'
 
-    render() {
-        return (
+
+const
+    Title = `HOW IT WORKS?`,
+    Paragraph =
+        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.`;
+
+const HowItWorksText = () => {
+    const [toAnimate, setToAnimate] = useState(false);
+
+    //set's animation for component:
+    const isItVisible = (isVisible) => (
+        isVisible === undefined ? setToAnimate(false) : setToAnimate(isVisible)
+    );
+    
+    //convetring strings to arrays:
+    const arrParagraph = Array.from(Paragraph);
+    const arrTitle = Array.from(Title);
+
+    return (
+        <VisibilitySensor onChange = {isItVisible}>
             <section className = "HowItWorksText">
-                <HowItWorksTitle />
+                
+                <h1 className="HowItWorksTitle" >
+                    {arrTitle.map(
+                        (item ,i) => 
+                            <CharComponent 
+                                key = {i}
+                                item = {item}
+                                i = {i}
+                                toAnimate = {toAnimate}
+                            />
+                    )}                    
+                </h1>
 
-                <HowItWorksParagraph />
+                <div className = "HowItWorksParagraph">
+                    {arrParagraph.map(
+                        (item ,i) => 
+                            <CharComponent 
+                                key = {i}
+                                item = {item}
+                                i = {i}
+                                toAnimate = {toAnimate}
+                            />
+                    )}          
+                </div>
+
             </section>
-        );
-    }
-}
-
-const HowItWorksTitle = () => (
-     <h1 className="HowItWorksTitle" >HOW IT WORKS?</h1>
-);
-
-const HowItWorksParagraph = () => (
-    <p className = "HowItWorksParagraph">
-        {Paragraph}          
-    </p>
-);
-
+        </VisibilitySensor>
+    );
+};
 
 export default HowItWorksText;
