@@ -1,24 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const ContactForm = () => (
-    <section className="ContactForm">
-        <FormTextContent />
-        <FormForUser />
-    </section>
-);
+//package:
+import VisibilitySensor from 'react-visibility-sensor';
 
-const FormTextContent = () => (
-    <React.Fragment >
-        <h2 className="ContactFormHeader">Still have some questions?</h2>
-        <p className="ContactFormTitle">Leave us your number and we will call you</p>
-    </React.Fragment>
-);
+// components:
+import FormTextContent from './FormTextContent';
+import FormForUser from './FormForUser';
 
-const FormForUser = () => (
-    <form className = "AwesomeFormBox">
-        <input type = "tel" className = "AwesomeFormInput" defaultValue = "+380 "/>
-        <button type = "submit" className="AwesomeFormButton"> </button>
-    </form>
-);
+const ContactForm = () => {
+    const [toAnimate, setToAnimate] = useState(false);
+
+    const IsItVisible = (isVisible) => 
+        isVisible === undefined ? setToAnimate(false) : setToAnimate(isVisible)  
+
+    return(
+        <VisibilitySensor onChange = {IsItVisible} partialVisibility = {true}>
+            <section className = 'ContactForm'>
+                <FormTextContent toAnimate = {toAnimate}/>
+                <FormForUser toAnimate = {toAnimate}/>
+            </section>
+        </VisibilitySensor>
+    )
+};
 
 export default ContactForm;

@@ -1,5 +1,9 @@
 import React from 'react';
+
+//context:
 import Consumer from '../ContextAPI/Info'
+
+//component:
 import MiningPlanItem from './MiningPlanItem'
 
 const MiningPlan = () => {
@@ -7,46 +11,27 @@ const MiningPlan = () => {
         <Consumer>
             {
                 value =>
-                    value.lightTheme ?
-                        <React.Fragment>
-                            <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
+                    <React.Fragment>
+                        <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
 
-                            <section className="MiningPlan">
-                                {
-                                    value.miningPlanData.map((item, i) => (
-                                        <MiningPlanItem
-                                            key={i}
-                                            name={item.name}
-                                            currencyValue={item.currencyValue}
-                                            currencyType={item.currencyType}
-                                            hashRate={item.hashRate}
-                                            price={item.price}
-                                            period={item.period}
-                                        />
-                                    ))
-                                }
-                            </section>
-                        </React.Fragment>
-                        :
-                        <React.Fragment>
-                            <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
-
-                            <section className="MiningPlan">
-                                {
-                                    value.miningPlanData.map((item, i) => (
-                                        <MiningPlanItem
-                                            key={i}
-                                            name={item.name}
-                                            currencyValue={item.currencyValue}
-                                            currencyType={item.currencyType}
-                                            hashRate={item.hashRate}
-                                            price={item.price}
-                                            period={item.period}
-                                        />
-                                    ))
-                                }
-                            </section>
-                        </React.Fragment>
+                        <section className="MiningPlan">
+                            {
+                                value.miningPlanData.map((item, i) => (
+                                    <MiningPlanItem
+                                        key = {i}
+                                        i = {i}
+                                        name = {item.name}
+                                        lightTheme   = {value.lightTheme}
+                                        currencyValue = {item.currencyValue}
+                                        currencyType = {item.currencyType}
+                                        hashRate = {item.hashRate}
+                                        price = {item.price}
+                                        period = {item.period}
+                                    />
+                                ))
+                            }
+                        </section>
+                    </React.Fragment>   
             }
         </Consumer>
     );

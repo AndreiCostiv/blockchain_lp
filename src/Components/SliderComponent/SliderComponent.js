@@ -10,12 +10,12 @@ import useWindowSize from '../CustomHooks/useWindowSize'
 import GliderItem from './GliderItem';
 
 // images (for demo)
-// in real project data comes from server
+// in real project data comes from server:
 import userAvatarA from '../../images/userAvatarA.png';
 import userAvatarB from '../../images/userAvatarB.png';
 import userAvatarC from '../../images/userAvatarC.png';
 
-// in real project data comes from server
+// in real project data comes from server:
 const SliderData = [
     {
         review: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
@@ -56,7 +56,7 @@ const SliderData = [
     
 ];
 
-const SliderComponent = () => {
+const SliderComponent = ({toAnimate}) => {
     const size = useWindowSize();
 
     return(
@@ -70,10 +70,12 @@ const SliderComponent = () => {
                         (item, i) => 
                             <GliderItem 
                                 key = {i}
+                                i = {i}
                                 review = {item.review}
                                 clientPhoto = {item.clientPhoto}
                                 clientName = {item.clientName}
                                 clientJob = {item.clientJob}
+                                toAnimate = {toAnimate}
                             />
                     )
                 }

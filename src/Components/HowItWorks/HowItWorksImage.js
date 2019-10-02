@@ -1,21 +1,52 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-import Consumer from '../ContextAPI/Info'
+//packages:
+import {useSpring, animated} from 'react-spring';
+import VisibilitySensor from 'react-visibility-sensor';
+
+//context:
+import Consumer from '../ContextAPI/Info';
+
+//image:
 import ArticleIMG from '../../images/ArticleIMG.png';
 
-const HowItWorksImage = () => (
-    <section className = "HowItWorksImageBox">
-        <Consumer>
-            {
-                context =>
-                    context.lightTheme ?
-                        <img className = "HowItWorksImage" src = {ArticleIMG} alt = " "/>
-                        :
-                        <img className = "HowItWorksImageDark" src = {ArticleIMG} alt = " "/>
+const HowItWorksImage = () => {
+    const [toAnimate, setToAnimate] = useState(false);
 
-            }
-        </Consumer>
-    </section>
-);
+    //checks when component should be animated:
+    const IsItVisible = (isVisible) => (
+        isVisible === undefined ? setToAnimate(false) : setToAnimate(isVisible)
+    );
+
+    //anomation config:
+    const springSetup = useSpring({
+        from: {opacity: toAnimate ? 0 : 1},
+        to: {opacity: toAnimate ? 1 : 0},
+        config: {duration: 50}
+    });
+
+    return(
+        <VisibilitySensor onChange = {IsItVisible} partialVisibility = {true}>
+            <section className = "HowItWorksImageBox">
+                <Consumer>
+                    {
+                        context =>
+                            <animated.img
+                                style = {springSetup} 
+                                src = {ArticleIMG} 
+                                alt = " "
+                                className = {
+                                    context.lightTheme ? 
+                                        "HowItWorksImage" 
+                                        : 
+                                        "HowItWorksImageDark"
+                                } 
+                            />    
+                    }
+                </Consumer>
+            </section>
+        </VisibilitySensor>
+    )
+};
 
 export default HowItWorksImage;
