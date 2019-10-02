@@ -12,7 +12,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
     "react-spring": "^8.0.20",
-    "react-typing-animation": "^1.6.2"
+    "react-typing-animation": "^1.6.2",
+    "react-visibility-sensor": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

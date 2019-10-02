@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
-import GrowingAdvantage from './GrowingAdvantage'
-import Safety from './Safety'
-import EasyStartAdvantage from './EasyStartAdvantage'
+//data:
+import AdvantagesData from './AdvantagesData';
+
+//component:
+import AdvantageItem from './AdvantageItem'
 
 class OurAdvantages extends Component{
     render() {
         return (    
         <section className="OurAdvantages">
-            <GrowingAdvantage />
-            <Safety />
-            <EasyStartAdvantage />
+            {
+                AdvantagesData.map( (item, i) => <AdvantageItem key = {i} item = {item} i = {i}/>)
+            }
         </section>
         )
     }
