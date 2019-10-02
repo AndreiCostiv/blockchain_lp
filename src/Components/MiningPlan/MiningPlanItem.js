@@ -1,5 +1,7 @@
-import React from 'react'
-import Consumer from '../ContextAPI/Info'
+import React from 'react';
+
+//context:
+import Consumer from '../ContextAPI/Info';
 
 const MiningPlanItem = (props) => (
     <Consumer>
