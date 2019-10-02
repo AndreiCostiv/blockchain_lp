@@ -9,7 +9,7 @@ const CharComponent = ({item, i, toAnimate}) => {
         from: {opacity: toAnimate ? 0 : 1},
         to: {opacity: toAnimate ? 1 : 0},
         delay: toAnimate ? (i * 1) : 0,
-        duration: 1
+        config: {duration: 20}
     });
 
     return(

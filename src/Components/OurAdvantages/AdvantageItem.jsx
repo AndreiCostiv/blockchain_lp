@@ -17,7 +17,8 @@ const AdvantageItem = ({item, i}) => {
     const springShow = useSpring({
         from: {opacity: toAnimate ? 0 : 1},
         to: {opacity: toAnimate ? 1 : 0},
-        delay: toAnimate ?  (i * 200) : 0
+        delay: toAnimate ?  (i * 200) : 0,
+        config: {duration: 350}
     });
 
     return(

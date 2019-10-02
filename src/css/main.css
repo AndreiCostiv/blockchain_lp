@@ -3,7 +3,10 @@
   padding: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  scrollbar-hight: none;
+  -ms-overflow-style: none;
+  scrollbar-hight: none; }
 
 @font-face {
   font-family: CONTF;
@@ -251,6 +254,7 @@
 .HowItWorksImageBox {
   width: 50%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: center; }
@@ -787,7 +791,7 @@
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; }
+  background: none; }
 
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {

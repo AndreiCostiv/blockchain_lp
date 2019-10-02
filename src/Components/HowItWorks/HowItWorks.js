@@ -8,14 +8,14 @@ import HowItWorksImage from './HowItWorksImage';
 import useWindowSize from '../CustomHooks/useWindowSize';
 
 const HowItWorks = () => {
-    const {width} = useWindowSize()
+    const {width} = useWindowSize();
 
     return(
         <section className = "HowItWorksMainBox">
             <HowItWorksText />
 
             {width >= 880 && <HowItWorksImage />}
-        </section>
+        </section>        
     )
 };
 
