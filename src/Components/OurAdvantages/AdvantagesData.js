@@ -1,6 +1,6 @@
 import ToTheMoon from '../../images/icons/ToTheMoon.svg';
-import SafetyIcon from '../../images/icons/Safety.svg'
-import TickTock from '../../images/icons/TickTock.svg'
+import SafetyIcon from '../../images/icons/Safety.svg';
+import TickTock from '../../images/icons/TickTock.svg';
 
 const AdvantagesData = [
     {
