@@ -7,7 +7,7 @@ import CharComponent from '../CharComponent/CharComponent'
 const formHeader = `Still have some questions?`;
 const fromTitle = `Leave us your number and we will call you`;
 
-const FormTextContent = ({toAnimate}) => {
+const FormTextContent = ({isVisible}) => {
     const arrHeader = Array.from(formHeader);
     const arrTitle = Array.from(fromTitle);
     
@@ -19,7 +19,7 @@ const FormTextContent = ({toAnimate}) => {
                         item = {item}
                         i = {i}
                         key = {i}
-                        toAnimate = {toAnimate}
+                        toAnimate = {isVisible}
                     />
                 )}
             </h2>
@@ -30,7 +30,7 @@ const FormTextContent = ({toAnimate}) => {
                         item = {item}
                         i = {i}
                         key = {i}
-                        toAnimate = {toAnimate}
+                        toAnimate = {isVisible}
                     />
                 )}
             </p>

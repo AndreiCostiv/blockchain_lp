@@ -3,12 +3,13 @@ import React from 'react';
 //package: 
 import {useSpring, animated} from 'react-spring';
 
-const FormForUser = ({toAnimate}) => {
+const FormForUser = ({isVisible}) => {
     //animation setup:
     const springConf = useSpring({
-        from: {opacity: toAnimate ? 0 : 1},
-        to: {opacity: toAnimate ? 1 : 0},
-        config: {duration: toAnimate ? 250 : 0}
+        from: {opacity: isVisible ? 0 : 1},
+        to: {opacity: isVisible ? 1 : 0},
+        config: {duration: isVisible ? 250 : 0},
+        delay: 0
     })
     
     return(

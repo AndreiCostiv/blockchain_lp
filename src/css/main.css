@@ -427,6 +427,39 @@
   line-height: 26px;
   letter-spacing: 0.1em; }
 
+.appDarkTheme {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-image: url("../images/DarkBackgoundImage.svg");
+  background-size: cover;
+  background-color: #3505BE;
+  background-repeat: repeat; }
+  @media screen and (max-width: 880px) {
+    .appDarkTheme {
+      margin: -56px 0 0 0; } }
+
+.HowItWorksImageDark {
+  width: 100%;
+  filter: brightness(70%); }
+
+.MiningPlanItemDark {
+  border: 1px solid #fff; }
+  .MiningPlanItemDark:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(255, 77, 33, 0.25) 10%, rgba(255, 255, 255, 0) 50%); }
+  .MiningPlanItemDark:nth-child(2) {
+    width: 320px;
+    height: 520px;
+    background-image: linear-gradient(180deg, #646464 0%, rgba(255, 255, 255, 0) 100%);
+    justify-content: space-evenly; }
+  .MiningPlanItemDark:nth-child(3) {
+    background-image: linear-gradient(0, rgba(100, 100, 100, 0.25) 0%, rgba(220, 164, 82, 0.2) 100%); }
+
+.BuyNowDark {
+  background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
+  outline: 1px solid #000;
+  box-shadow: 1px 0 10px transparent, -1px 0 10px transparent; }
+
 @media screen and (max-width: 880px) {
   .HeaderComponentTitle {
     margin: 0 0 20px 0;
@@ -529,15 +562,17 @@
       .MiningPlanItem:nth-child(2) .MiningPrice {
         margin: 0;
         font-size: 2em; }
-  .MiningPlanItemBlack:nth-child(2) {
-    width: 141px;
-    height: 211px;
+  .MiningPlanItemDark:nth-child(2) {
+    width: 163px;
+    height: 240px;
+    margin: 0 25%;
+    order: 1;
     justify-content: flex-start; }
-    .MiningPlanItemBlack:nth-child(2) .MiningName {
+    .MiningPlanItemDark:nth-child(2) .MiningName {
       margin: 5px 0 0 0;
       font-size: 20px;
       letter-spacing: initial; }
-    .MiningPlanItemBlack:nth-child(2) .MiningPrice {
+    .MiningPlanItemDark:nth-child(2) .MiningPrice {
       margin: 0;
       font-size: 2em; }
   .MiningName {
@@ -581,39 +616,6 @@
     height: 35px;
     margin: 0 0 0 17px;
     background-size: 20px; } }
-
-.appDarkTheme {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  background-image: url("../images/DarkBackgoundImage.svg");
-  background-size: cover;
-  background-color: #3505BE;
-  background-repeat: repeat; }
-  @media screen and (max-width: 880px) {
-    .appDarkTheme {
-      margin: -56px 0 0 0; } }
-
-.HowItWorksImageDark {
-  width: 100%;
-  filter: brightness(70%); }
-
-.MiningPlanItemDark {
-  border: 1px solid #fff; }
-  .MiningPlanItemDark:nth-child(1) {
-    background-image: linear-gradient(180deg, rgba(255, 77, 33, 0.25) 10%, rgba(255, 255, 255, 0) 50%); }
-  .MiningPlanItemDark:nth-child(2) {
-    width: 320px;
-    height: 520px;
-    background-image: linear-gradient(180deg, #646464 0%, rgba(255, 255, 255, 0) 100%);
-    justify-content: space-evenly; }
-  .MiningPlanItemDark:nth-child(3) {
-    background-image: linear-gradient(0, rgba(100, 100, 100, 0.25) 0%, rgba(220, 164, 82, 0.2) 100%); }
-
-.BuyNowDark {
-  background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
-  outline: 1px solid #000;
-  box-shadow: 1px 0 10px transparent, -1px 0 10px transparent; }
 
 .glider-contain {
   width: 100%;
