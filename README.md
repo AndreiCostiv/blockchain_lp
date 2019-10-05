@@ -13,7 +13,7 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ### `gulp watch`
-Lunches task manager - gulp, that inits sass-preprocessor. 
+Launches task manager - gulp, that inits sass-preprocessor. 
 
 ### `npm test`
 
