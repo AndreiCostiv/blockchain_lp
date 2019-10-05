@@ -1,3 +1,800 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-hight: none;
+  -ms-overflow-style: none;
+  scrollbar-hight: none; }
+
+@font-face {
+  font-family: CONTF;
+  src: url("../fonts/CONTF.TTF") format("truetype"); }
+
+@font-face {
+  font-family: CONSOLA;
+  src: url("../fonts/CONSOLA.TTF") format("truetype"); }
+
+@font-face {
+  font-family: CODAR;
+  src: url("../fonts/CODA-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: CODAB;
+  src: url("../fonts/CODA-ExtraBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: freak-regular;
+  src: url("../fonts/control-freak-regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Roboto-bold;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Tahoma;
+  src: url("../fonts/Tahoma.ttf") format("truetype"); }
+
+.ClientReviews {
+  width: 100%;
+  height: auto;
+  margin: 40px 0; }
+
+.ClientReviewsHeader {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 81px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF; }
+  @media screen and (max-width: 880px) {
+    .ClientReviewsHeader {
+      font-size: 32px; } }
+
+.ContactForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+.ContactFormHeader {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: Roboto-bold, sans-serif;
+  font-size: 60px;
+  color: #fff;
+  font-family: CODAR, sans-serif;
+  font-size: 5vw;
+  font-weight: normal; }
+  @media screen and (max-width: 880px) {
+    .ContactFormHeader {
+      margin: 0;
+      font-size: 6.5vw; } }
+
+.ContactFormTitle {
+  font-family: CODAR, sans-serif;
+  color: #fff;
+  font-size: 3vw;
+  margin: 0 0 30px 0; }
+
+.AwesomeFormBox {
+  width: 800px;
+  height: auto;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+
+.AwesomeFormInput {
+  width: 420px;
+  height: 44px;
+  margin: 0 30px 0 0;
+  padding: 0 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 40px;
+  outline: none;
+  border: 3px solid #FFFFFF;
+  border-radius: 50px 50px 50px 0; }
+
+.AwesomeFormButton {
+  width: 50px;
+  height: 50px;
+  position: static;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  outline: none;
+  background-color: transparent;
+  background-image: url("../images/icons/Arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px; }
+  .AwesomeFormButton:hover {
+    cursor: pointer; }
+
+.HeaderComponent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.HeaderComponentTitle {
+  margin: 0 auto 54px auto;
+  cursor: default;
+  color: #fff;
+  font-size: 9vw;
+  font-family: CONTF, sans-serif;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.TryItButton {
+  width: 35%;
+  height: 80px;
+  outline: 7px solid #fff;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .TryItButton:hover {
+    cursor: pointer; }
+
+.TryItButtonText {
+  font-family: CONSOLA, sans-serif;
+  font-size: 4vw;
+  font-weight: normal;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.TryItButtonImg {
+  width: 40px;
+  height: 40px; }
+
+.app {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-image: url("../images/BackgoundImage.svg");
+  background-size: cover;
+  background-color: #3505BE;
+  background-repeat: repeat; }
+  @media screen and (max-width: 880px) {
+    .app {
+      margin: -56px 0 0 0; } }
+
+.ThemeTrigger {
+  width: 135px;
+  height: 58px;
+  padding: 0 4px;
+  position: absolute;
+  top: 34px;
+  right: 27px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  border-radius: 31.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: url("../images/icons/ThemeIcon.svg");
+  background-repeat: no-repeat;
+  background-position-x: 84px;
+  background-position-y: 7px; }
+
+.TriggerCircle {
+  width: 50px;
+  height: 50px;
+  margin: auto 0;
+  outline-style: none;
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.75); }
+
+.HowItWorksMainBox {
+  width: 95%;
+  height: auto;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between; }
+
+.HowItWorksText {
+  width: 40%;
+  height: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.HowItWorksTitle {
+  font-size: 2vw;
+  font-family: CODAR, sans-serif; }
+
+.HowItWorksParagraph {
+  color: #B0FFDE;
+  font-family: CODAR, sans-serif;
+  font-size: 22.7356px;
+  line-height: 32px;
+  letter-spacing: 0.1em; }
+
+.HowItWorksImageBox {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; }
+
+.HowItWorksImage {
+  width: 100%;
+  height: 100%; }
+
+.MiningPlanComponentHeader {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: Roboto-bold, sans-serif;
+  font-size: 60px;
+  color: #fff;
+  margin: 40px 0; }
+  @media screen and (max-width: 880px) {
+    .MiningPlanComponentHeader {
+      margin: 0;
+      font-size: 6.5vw; } }
+
+.MiningPlan {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.MiningPlanItem {
+  width: 300px;
+  height: 450px;
+  margin: 5px 0;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.45);
+  border: 1px solid aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .MiningPlanItem:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(238, 0, 0, 0.2) 0%, rgba(220, 164, 82, 0) 100%); }
+  .MiningPlanItem:nth-child(2) {
+    width: 400px;
+    height: 600px;
+    background-image: linear-gradient(180deg, rgba(250, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    justify-content: space-evenly; }
+  .MiningPlanItem:nth-child(3) {
+    background-image: linear-gradient(180deg, rgba(0, 255, 87, 0.3) 0%, rgba(255, 255, 255, 0) 100%); }
+
+.MiningName {
+  width: 100%;
+  margin: 0 0 -5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto-bold, sans-serif;
+  color: #fff;
+  font-size: 60px; }
+
+.MiningPlanItem:nth-child(2) .MiningName {
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin: 0 0 -35px 0; }
+
+.MiningPlanItem:nth-child(2) .MiningPrice {
+  margin: 0 0 -35px 0; }
+
+.MiningCurrencies {
+  color: #ffffff;
+  font-family: CODAR, sans-serif; }
+
+.orangeCurrencyValue {
+  color: #FFB800;
+  margin: 0 5px 0 0; }
+
+.greenCurrencyValue {
+  color: #00EF8B;
+  margin: 0 5px 0 0; }
+
+.redCurrencyValue {
+  color: #FF0000;
+  margin: 0 5px 0 0; }
+
+.HashRate {
+  width: 80%;
+  margin: 25px 0 30px 0;
+  outline: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.HashRateTitle, .HashRateValue {
+  font-family: CODAR, sans-serif;
+  color: #fff;
+  font-size: 40px; }
+
+.MiningPrice {
+  margin: 0 0 0 0;
+  color: #fff;
+  font-family: freak-regular, sans-serif;
+  font-size: 55px; }
+
+.MiningPricePerPeriod {
+  margin: 0 0 0 0;
+  font-size: 15px;
+  font-family: CODAR, sans-serif;
+  font-weight: normal;
+  color: rgba(176, 255, 222, 0.8); }
+
+.BuyNow {
+  width: auto;
+  margin: 15px 0 0 0;
+  padding: 0 10px;
+  position: static;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+  border: none;
+  outline: none;
+  font-family: CODAR, sans-serif;
+  color: #B0FFDE;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  box-shadow: 1px 0 30px #3505BE, -1px 0 30px #3505BE; }
+
+.OurAdvantages {
+  width: 98%;
+  height: auto;
+  margin: 0 auto 50px auto;
+  padding: 30px 0 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.AdventageItem {
+  min-width: 465px;
+  width: 25%;
+  height: 150px;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+.AdventageItemIconBlock {
+  width: 150px;
+  height: 150px;
+  margin: 0 40px 0 0; }
+
+.AdventageItemIcon {
+  width: 150px;
+  height: 150px; }
+
+.AdventageTextBox {
+  margin: 35px 0 0 0;
+  color: white; }
+
+.AdventageHeader {
+  font-family: Roboto-regular, sans-serif;
+  font-size: 1.5vw;
+  letter-spacing: 0.1em; }
+
+.AdventageParagraph {
+  color: #B0FFDE;
+  font-family: CODAR, sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.1em; }
+
+.appDarkTheme {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-image: url("../images/DarkBackgoundImage.svg");
+  background-size: cover;
+  background-color: #3505BE;
+  background-repeat: repeat; }
+  @media screen and (max-width: 880px) {
+    .appDarkTheme {
+      margin: -56px 0 0 0; } }
+
+.HowItWorksImageDark {
+  width: 100%;
+  filter: brightness(70%); }
+
+.MiningPlanItemDark {
+  border: 1px solid #fff; }
+  .MiningPlanItemDark:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(255, 77, 33, 0.25) 10%, rgba(255, 255, 255, 0) 50%); }
+  .MiningPlanItemDark:nth-child(2) {
+    width: 320px;
+    height: 520px;
+    background-image: linear-gradient(180deg, #646464 0%, rgba(255, 255, 255, 0) 100%);
+    justify-content: space-evenly; }
+  .MiningPlanItemDark:nth-child(3) {
+    background-image: linear-gradient(0, rgba(100, 100, 100, 0.25) 0%, rgba(220, 164, 82, 0.2) 100%); }
+
+.BuyNowDark {
+  background-image: linear-gradient(90deg, black 0%, rgba(100, 100, 100, 0) 100%);
+  outline: 1px solid #000;
+  box-shadow: 1px 0 10px transparent, -1px 0 10px transparent; }
+
+@media screen and (max-width: 880px) {
+  .HeaderComponentTitle {
+    margin: 0 0 20px 0;
+    font-size: 2.5em; }
+  .TryItButton {
+    height: 30px;
+    outline: 2.5px solid #fff; }
+  .TryItButtonImg {
+    width: 20px;
+    height: 20px; } }
+
+@media screen and (max-width: 880px) {
+  .ThemeTrigger {
+    width: 40px;
+    height: 20px;
+    background-size: contain;
+    background-position-x: 25px;
+    background-position-y: 0; }
+  .TriggerCircle {
+    width: 18px;
+    height: 18px; } }
+
+@media screen and (max-width: 880px) {
+  .OurAdvantages {
+    margin: 0; }
+  .AdventageItem {
+    min-width: 320px;
+    width: 95%;
+    height: 100px;
+    margin: 15px 0 30px 0; }
+  .AdventageItemIconBlock {
+    width: 120px;
+    height: 120px;
+    margin: 0 20px 0 0; }
+  .AdventageItemIcon {
+    width: 120px;
+    height: 120px; }
+  .AdventageTextBox {
+    margin: auto 0; }
+  .AdventageHeader {
+    font-size: 18px;
+    letter-spacing: 0.1em; }
+  .AdventageParagraph {
+    font-size: 12px; } }
+
+@media screen and (max-width: 880px) {
+  .HowItWorksMainBox {
+    width: 100%;
+    height: 202px;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url("../images/ArticleImgMobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .HowItWorksText {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .HowItWorksTitle {
+    font-size: 27.9762px;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    font-family: CODAB, sans-serif; }
+  .HowItWorksParagraph {
+    color: #B0FFDE;
+    font-family: CODAR, sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.1em; } }
+
+@media screen and (max-width: 880px) {
+  .MiningPlanComponentHeader {
+    margin: 15px 0;
+    font-size: 2.2em;
+    letter-spacing: -0.06em; }
+  .MiningPlanItem {
+    width: 141px;
+    height: 225px;
+    margin: 20px 0;
+    justify-content: flex-start; }
+    .MiningPlanItem:nth-child(1) {
+      order: 2; }
+    .MiningPlanItem:nth-child(3) {
+      order: 3; }
+    .MiningPlanItem:nth-child(2) {
+      width: 163px;
+      height: 240px;
+      margin: 0 25%;
+      order: 1;
+      justify-content: flex-start; }
+      .MiningPlanItem:nth-child(2) .MiningName {
+        margin: 5px 0 0 0;
+        font-size: 30px;
+        letter-spacing: initial; }
+      .MiningPlanItem:nth-child(2) .MiningPrice {
+        margin: 0;
+        font-size: 2em; }
+  .MiningPlanItemDark:nth-child(2) {
+    width: 163px;
+    height: 240px;
+    margin: 0 25%;
+    order: 1;
+    justify-content: flex-start; }
+    .MiningPlanItemDark:nth-child(2) .MiningName {
+      margin: 5px 0 0 0;
+      font-size: 20px;
+      letter-spacing: initial; }
+    .MiningPlanItemDark:nth-child(2) .MiningPrice {
+      margin: 0;
+      font-size: 2em; }
+  .MiningName {
+    margin: 5px 0 0 0;
+    font-size: 20px; }
+  .MiningCurrencies {
+    margin: 0 0 5px 0;
+    font-size: 8px;
+    line-height: 13px;
+    letter-spacing: 0.1em; }
+  .HashRate {
+    margin: 15px 0 5px 0; }
+  .HashRateTitle, .HashRateValue {
+    font-size: 20px; }
+  .MiningPrice {
+    font-size: 2em; }
+  .BuyNow {
+    width: 75px;
+    height: 30px;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-size: 15px;
+    box-shadow: none; } }
+
+@media screen and (max-width: 880px) {
+  .ContactForm {
+    padding: 0 0 20px 0; }
+  .ContactFormTitle {
+    margin: 0 0 20px 0; }
+  .AwesomeFormBox {
+    width: 80%;
+    margin: 0;
+    justify-content: center; }
+  .AwesomeFormInput {
+    width: 60%;
+    height: 29px;
+    margin: 0;
+    font-size: 20px; }
+  .AwesomeFormButton {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 17px;
+    background-size: 20px; } }
+
+.glider-contain {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+.glider {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  transform: translateZ(0); }
+
+.glider-track {
+  transform: translateZ(0);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1; }
+
+.glider.draggable {
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.glider.draggable .glider-slide img {
+  user-select: none;
+  pointer-events: none; }
+
+.glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+.glider-slide {
+  user-select: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%; }
+
+.glider-slide img {
+  max-width: 100%; }
+
+.glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0; }
+
+.glider-prev, .glider-next {
+  user-select: none;
+  position: absolute;
+  outline: none;
+  background: none;
+  padding: 0;
+  z-index: 2;
+  font-size: 40px;
+  text-decoration: none;
+  left: -23px;
+  border: 0;
+  top: 30%;
+  cursor: pointer;
+  color: #666;
+  opacity: 1;
+  line-height: 1;
+  transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67), color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+
+.glider-prev:hover,
+.glider-next:hover,
+.glider-prev:focus,
+.glider-next:focus {
+  color: #a89cc8; }
+
+.glider-next {
+  right: -23px;
+  left: auto; }
+
+.glider-next.disabled,
+.glider-prev.disabled {
+  opacity: .25;
+  color: #666;
+  cursor: default; }
+
+.glider-slide {
+  min-width: 150px; }
+
+.glider-hide {
+  opacity: 0; }
+
+.glider-dots {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
   padding: 0; }
+
+.glider-dot {
+  background: none;
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 999px;
+  background: #ccc;
+  width: 12px;
+  height: 12px;
+  margin: 7px; }
+
+.glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+  background: #a89cc8; }
+
+@media (max-width: 36em) {
+  .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none;
+    width: 7px;
+    height: 3px; }
+  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(156, 156, 156, 0.25);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25); } }
+
+.glider-slide {
+  margin: 0 50px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #fff; }
+
+.clientReview {
+  font-family: Thahoma, sans-serif;
+  font-size: 18px; }
+  .clientReview::first-letter {
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    text-transform: uppercase; }
+
+.clientProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+
+.clientPhoto {
+  width: 95px;
+  height: 95px; }
+
+.clientTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+
+.clientName {
+  margin: 0 0 0 24px;
+  font-family: Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px; }
+
+.clientJob {
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #9A9A9A; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: none; }
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #fff; }

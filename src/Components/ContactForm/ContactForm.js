@@ -1,11 +1,25 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 
-class ContactForm extends Component {
-    render() {
-        return(
-            <div>test</div>
-        )
-    }
-}
+//package:
+import VisibilitySensor from 'react-visibility-sensor';
+
+// components:
+import FormTextContent from './FormTextContent';
+import FormForUser from './FormForUser';
+
+const ContactForm = () => {
+    return(
+        <VisibilitySensor partialVisibility = {true}>
+            { 
+                ({isVisible}) => (
+                    <section className = 'ContactForm'>
+                            <FormTextContent isVisible = {isVisible}/>
+                            <FormForUser isVisible = {isVisible}/>
+                    </section>
+                )
+            }
+        </VisibilitySensor>
+    )
+};
 
 export default ContactForm;

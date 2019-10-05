@@ -1,0 +1,142 @@
+@import "./mixins"
+
+.MiningPlanComponentHeader
+  +headerForComponents
+
+  margin: 40px 0
+
+.MiningPlan
+  width: 100%
+
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-evenly
+
+.MiningPlanItem
+  width: 300px
+  height: 450px
+
+  margin: 5px 0
+
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.45)
+  border: 1px solid aqua
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  &:nth-child(1)
+    background:
+      image: linear-gradient(180deg, rgba(238, 0, 0, 0.2) 0%, rgba(220, 164, 82, 0) 100%)
+
+  &:nth-child(2)
+    width: 400px
+    height: 600px
+
+    background:
+      image: linear-gradient(180deg, rgba(250, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
+
+    justify-content: space-evenly
+
+  &:nth-child(3)
+    background:
+      image: linear-gradient(180deg, rgba(0, 255, 87, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
+
+.MiningName
+  width: 100%
+
+  margin: 0 0 -5px 0
+
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+  font-family: Roboto-bold, sans-serif
+  color: #fff
+  font-size: 60px
+
+.MiningPlanItem:nth-child(2)
+  .MiningName
+    font-size: 80px
+    letter-spacing: 10px
+
+    margin: 0 0 -35px 0
+
+  .MiningPrice
+    margin: 0 0 -35px 0
+
+.MiningCurrencies
+  color: #ffffff
+  font-family: CODAR, sans-serif
+
+.orangeCurrencyValue
+  color: #FFB800
+  margin: 0 5px 0 0
+
+.greenCurrencyValue
+  color: #00EF8B
+  margin: 0 5px 0 0
+
+.redCurrencyValue
+  color: #FF0000
+  margin: 0 5px 0 0
+
+.HashRate
+  width: 80%
+
+  margin: 25px 0 30px 0
+
+  outline: 1px solid #fff
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.HashRateTitle, .HashRateValue
+  font-family: CODAR, sans-serif
+  color: #fff
+  font-size: 40px
+
+.MiningPrice
+  margin: 0 0 0 0
+
+  color: #fff
+  font-family: freak-regular, sans-serif
+  font-size: 55px
+
+.MiningPricePerPeriod
+  margin: 0 0 0 0
+
+  font-size: 15px
+  font-family: CODAR, sans-serif
+  font-weight: normal
+  color: rgba(176, 255, 222, 0.8)
+
+.BuyNow
+  width: auto
+  
+  margin: 15px 0 0 0
+  padding: 0 10px
+
+  position: static 
+
+  cursor: pointer
+
+  background:
+    image: linear-gradient(90deg, rgba(74, 0, 224, 1) 0%, rgba(142, 45, 226, 1) 100%)
+
+  border: none
+  outline: none
+
+  font-family: CODAR, sans-serif
+  color: #B0FFDE
+  font-style: normal
+  font-weight: normal
+  font-size: 40px
+
+  box-shadow: 1px 0 30px #3505BE, -1px 0 30px #3505BE

@@ -1,0 +1,45 @@
+.appDarkTheme
+  width: 100%
+  height: auto
+
+  padding: 0
+
+  background:
+    image: url("../images/DarkBackgoundImage.svg")
+    size: cover
+    color: #3505BE
+    repeat: repeat
+  @media screen and (max-width: 880px)
+    margin: -56px 0 0 0
+
+.HowItWorksImageDark
+  width: 100%
+
+  filter: brightness(70%)
+
+.MiningPlanItemDark
+  border: 1px solid #fff
+
+  &:nth-child(1)
+    background:
+      image: linear-gradient(180deg, rgba(255, 77, 33, 0.25) 10%, rgba(255, 255, 255, 0) 50%)
+
+  &:nth-child(2)
+    width: 320px
+    height: 520px
+
+    background:
+      image: linear-gradient(180deg, rgba(100, 100, 100, 1) 0%, rgba(255, 255, 255, 0) 100%)
+
+    justify-content: space-evenly
+
+  &:nth-child(3)
+    background:
+      image: linear-gradient(0, rgba(100, 100, 100, 0.25) 0%, rgba(220, 164, 82, 0.2) 100%)
+
+.BuyNowDark
+  background:
+    image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(100, 100, 100, 0) 100%)
+
+  outline: 1px solid #000
+  box-shadow: 1px 0 10px transparent, -1px 0 10px transparent

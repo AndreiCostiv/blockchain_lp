@@ -1,37 +1,38 @@
-import React, { Component } from 'react';
+//packages:
+import React, { Fragment } from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 //styles:
 import './css/main.css'
 
-//Components
+//components:
 import {Info} from './Components/ContextAPI/Info';
-import HeaderComponent from './Components/HeaderComponent/HeaderComponent.js';
-import OurAdvantages from './Components/OurAdvantages/OurAdvantages.js';
-import HowItWorks from './Components/HowItWorks/HowItWorks.js';
-import MiningPlan from './Components/MiningPlan/MiningPlan.js';
-import ClientsReviews from './Components/ClientsReviews/ClientsReviews.js';
-import ContactForm from './Components/ContactForm/ContactForm.js';
+import Consumer from './Components/ContextAPI/Info';
+import ThemeTrigger from './Components/ThemeTrigger/ThemeTrigger';
+import LightApp from './Components/LightApp/LightApp';
 
-class App extends Component {
-    render() {
-        return (
+const App = () => {
+    return(
+        <Router>
             <Info>
-                <section className="app">
-                    <HeaderComponent />
-
-                    <OurAdvantages />
-
-                    <HowItWorks />
-
-                    <MiningPlan />
-
-                    <ClientsReviews />
-
-                    <ContactForm />
-                </section>
+                <Switch>
+                    <Route path = '/' render = { () => (
+                        <Fragment>        
+                            <ThemeTrigger/>
+                                    
+                            <Consumer>
+                                { context => 
+                                    <LightApp 
+                                        lightTheme = {context.lightTheme}
+                                    />
+                                }
+                            </Consumer>
+                        </Fragment>
+                    ) }/>
+                </Switch>                
             </Info>
+        </Router>  
     )
-  }
 }
 
 export default App;
