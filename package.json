@@ -1,7 +1,8 @@
 {
   "name": "blockchain-lp",
   "version": "0.1.0",
-  "private": true,
+  "private": true,,
+  "homepage":"http://AndriiKostiv.github.io/blockchain_lp/",
   "dependencies": {
     "@glidejs/glide": "^3.3.0",
     "particles.js": "^2.0.0",
@@ -16,6 +17,8 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
