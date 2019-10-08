@@ -1,7 +1,7 @@
 {
   "name": "blockchain-lp",
   "version": "0.1.0",
-  "private": true,,
+  "private": true,
   "homepage":"http://AndriiKostiv.github.io/blockchain_lp/",
   "dependencies": {
     "@glidejs/glide": "^3.3.0",
