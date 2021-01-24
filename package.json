@@ -2,9 +2,10 @@
   "name": "blockchain-lp",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://AndriiKostiv.github.io/blockchain_lp/",
+  "homepage": "http://AndriiKostiv.github.io/blockchain_lp/",
   "dependencies": {
     "@glidejs/glide": "^3.3.0",
+    "node-sass": "^5.0.0",
     "particles.js": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -33,9 +34,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-sass": "^4.0.2"
-  }
+  "devDependencies": {}
 }
