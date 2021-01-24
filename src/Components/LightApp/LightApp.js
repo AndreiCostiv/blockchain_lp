@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 //Components
-import HeaderComponent from "../HeaderComponent/HeaderComponent";
+// import HeaderComponent from "../HeaderComponent/HeaderComponent";
 import OurAdvantages from "../OurAdvantages/OurAdvantages";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import MiningPlan from "../MiningPlan/MiningPlan";
