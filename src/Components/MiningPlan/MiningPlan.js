@@ -12,7 +12,7 @@ const MiningPlan = () => {
             {
                 value =>
                     <React.Fragment>
-                        <h2 className="MiningPlanComponentHeader">Choose your mining plan</h2>
+                        <h2 className="MiningPlanComponentHeader">Choose your plan</h2>
 
                         <section className="MiningPlan">
                             {

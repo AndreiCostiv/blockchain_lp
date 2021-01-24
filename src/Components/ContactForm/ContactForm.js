@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 //package:
 import VisibilitySensor from 'react-visibility-sensor';
