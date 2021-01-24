@@ -1,6 +1,5 @@
 //packages:
 import React, {Fragment} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 //styles:
 import './sass/main.sass'
@@ -13,24 +12,20 @@ import LightApp from './Components/LightApp/LightApp';
 
 const App = () => {
     return(
-        <Router>
-            <Route path = '/'>
-                <Info>
-                    <Fragment>        
-                        <ThemeTrigger/>
-                                        
-                        <Consumer>
-                            { context => 
-                                <LightApp 
-                                    lightTheme = {context.lightTheme}
-                                />
-                            }
-                        </Consumer>
-                    </Fragment>                
-                </Info>
-            </Route>
-        </Router>
-    )
-}
+        <Info>
+            <Fragment>
+                <ThemeTrigger/>
+                
+                <Consumer>
+                    { context =>
+                        <LightApp
+                            lightTheme = {context.lightTheme}
+                        />
+                    }
+                </Consumer>
+            </Fragment>
+        </Info>
+    );
+};
 
 export default App;
