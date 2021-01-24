@@ -11,7 +11,7 @@ import ContactForm from "../ContactForm/ContactForm";
 const LightApp = ({lightTheme}) => {  
     return (
         <Fragment>
-            <HeaderComponent />
+            {/* <HeaderComponent /> */}
 
             <section className = {lightTheme ? 'app' : 'appDarkTheme'}>
 

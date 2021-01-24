@@ -2,7 +2,7 @@
 import React, {Fragment} from 'react';
 
 //styles:
-// import './sass/main.sass'
+import './sass/main.sass'
 
 //components:
 import {Info} from './Components/ContextAPI/Info';
